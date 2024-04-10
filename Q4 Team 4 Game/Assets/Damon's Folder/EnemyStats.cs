@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class EnemyStats : MonoBehaviour
             health -= player.GetComponent<PlayerStats>().damage;
             TakeDamage(player.GetComponent<PlayerStats>().damage);
             DealDamage();
+
+            if (player.GetComponent<PlayerStats>().health <= 0)
+            {
+                SceneManager.LoadScene("Lose Screen");
+            }
         } 
     }
     public void TakeDamage(int damage)
@@ -60,6 +66,9 @@ public class EnemyStats : MonoBehaviour
 
     public void DealDamage()
     {
+        gameObject.GetComponent<Renderer>().material.color = Color.red;
         player.GetComponent<PlayerStats>().health -= damageDealing;
+
+        gameObject.GetComponent<Renderer>().material.color = Color.white;
     }
 }

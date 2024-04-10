@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -21,8 +22,8 @@ public class PlayerStats : MonoBehaviour
     public float fruitTimer;
     [SerializeField] TextMeshProUGUI timer;
 
-
-    // Damage player
+    
+    /* Damage player
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.GetComponent("EnemyStats") as EnemyStats) != null)
@@ -37,7 +38,7 @@ public class PlayerStats : MonoBehaviour
                 // Death
                 if (health <= 0)
                 {
-                    Console.WriteLine("YOU DIED");
+                    SceneManager.LoadScene("Lose Screen");
                 }
             }
         }
@@ -49,7 +50,7 @@ public class PlayerStats : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.color = Color.white;
         
     }
-
+    */
 
     // Start is called before the first frame update
     void Start()
