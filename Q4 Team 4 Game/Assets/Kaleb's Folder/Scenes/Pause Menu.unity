@@ -1445,6 +1445,10 @@ PrefabInstance:
       propertyPath: WASD
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5203530967214628706, guid: 414dc3237dc2a14458426e1668024404, type: 3}
+      propertyPath: jumpbool
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5203530967214628709, guid: 414dc3237dc2a14458426e1668024404, type: 3}
       propertyPath: m_Name
       value: Player

@@ -17,4 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 060398a0368f380468433c9da1e73ace
+  - enabled: 1
+    path: Assets/Scenes/Credits Folder/Damon's Credits.unity
+    guid: 0d012c1e03c26fe4284ed15ec268f013
+  - enabled: 1
+    path: Assets/Scenes/Credits Folder/Hannah's Credits.unity
+    guid: 60e5d0ed529e0aa4684e681558eccc68
+  - enabled: 1
+    path: Assets/Scenes/Credits Folder/Joshua's Credits.unity
+    guid: 1dd30f4dac048cf4e968c2c1cbf8401c
+  - enabled: 1
+    path: Assets/Scenes/Credits Folder/Kaleb's Credits.unity
+    guid: fb109506ea091fb43bf22b6adc44a7a4
+  - enabled: 1
+    path: Assets/Scenes/Credits Folder/Siena's Credits.unity
+    guid: bb8951210f99283488b6b6cdec967004
   m_configObjects: {}
