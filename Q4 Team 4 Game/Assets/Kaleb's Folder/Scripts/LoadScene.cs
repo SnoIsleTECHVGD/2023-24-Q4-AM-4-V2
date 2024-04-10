@@ -32,6 +32,36 @@ public class LoadScene : MonoBehaviour
         nam = scene.name;
     }
 
+    public void PCredits()
+    {
+        SceneManager.LoadScene("Credits Scene");
+    }
+
+    public void KCredits()
+    {
+        SceneManager.LoadScene("Kaleb's Credits");
+    }
+
+    public void DCredits()
+    {
+        SceneManager.LoadScene("Damon's Credits");
+    }
+
+    public void JCredits()
+    {
+        SceneManager.LoadScene("Joshua's Credits");
+    }
+
+    public void HCredits()
+    {
+        SceneManager.LoadScene("Hannah's Credits");
+    }
+
+    public void SCredits()
+    {
+        SceneManager.LoadScene("Siena's Credits");
+    }
+
     public void ReturnFromCredits()
     {
         SceneManager.LoadScene(nam);
