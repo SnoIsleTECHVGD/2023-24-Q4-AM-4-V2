@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     public KeyCode left, right, jump;
     public float buildup = 1, jumpheight = 1, maxspeed = 1;
     private Rigidbody2D rb2D;
+    private BoxCollider2D b2D;
     public bool WASD = false;
     public LayerMask groundLayer;
     public float jumpbool;
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        b2D = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -36,6 +38,10 @@ public class Movement : MonoBehaviour
             rb2D.gravityScale = -rb2D.gravityScale;
             antiGravity = !antiGravity;
             fhq = !fhq;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            b2D.enabled = !b2D.enabled;
         }
         // Everything Between The Green Is God Mode
         if (WASD == false)
