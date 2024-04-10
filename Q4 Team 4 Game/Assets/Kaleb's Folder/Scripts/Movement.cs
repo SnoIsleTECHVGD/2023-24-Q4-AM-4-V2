@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     private float timeSinceJump = -5;
     float cooldown = 0.2f;
     private float xVelocity;
+    private bool antiGravity = false;
+    private bool fhq = false;
 
     private void Start()
     {
@@ -22,7 +24,20 @@ public class Movement : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        // Everything Between The Green Is God Mode
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            antiGravity = !antiGravity;
+        }
+        if (antiGravity)
+        {
+            rb2D.gravityScale = -rb2D.gravityScale;
+            antiGravity = !antiGravity;
+            fhq = !fhq;
+        }
+        // Everything Between The Green Is God Mode
         if (WASD == false)
         {
             if (Input.GetKey(left))
@@ -62,7 +77,7 @@ public class Movement : MonoBehaviour
         else { jumpHeld = false; }
 
 
-        if (!jumpHeld && !grounded && rb2D.velocity.y > 0)
+        if (!jumpHeld && !grounded && rb2D.velocity.y > 0 && !fhq)
         {
             xVelocity = rb2D.velocity.x;
             rb2D.velocity = new Vector3(xVelocity, 0, 0);
