@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
         // Everything Between The Green Is God Mode
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -73,6 +73,7 @@ public class Movement : MonoBehaviour
         {
             xVelocity = rb2D.velocity.x;
             rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
+            cooldown = 0f;
         }
 
         // Control jump height with length of jump held
@@ -92,6 +93,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(jump) && !grounded)
         {
             timeSinceJump = Time.time;
+            cooldown = 0.2f;
         }
         rb2D.velocity = new Vector2(Mathf.Clamp(rb2D.velocity.x, -maxspeed, maxspeed), rb2D.velocity.y);
     }
