@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87edd339b62500642af7102d079b97ac
+guid: 7c97445b8c6745a46ab97de145008911
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,8 +48,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 325
+  spriteBorder: {x: 183, y: 0, z: 173, w: 559}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 0
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Lab equipment_0
       rect:
         serializedVersion: 2
-        x: 94
-        y: 0
-        width: 159
-        height: 917
+        x: 0
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ae020f9854682489091d8b2dddce1d
-      internalID: 590257435
+      spriteID: b57292fc66de0434e87d04c9dec70ca1
+      internalID: -864408254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: Lab equipment_1
       rect:
         serializedVersion: 2
-        x: 323
-        y: 0
-        width: 176
-        height: 917
+        x: 375
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83e05cc1229db244ab061c629c428446
-      internalID: -2105731935
+      spriteID: 6d037cd4fdae5314f8abfedea55b2f50
+      internalID: -1767611840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: Lab equipment_2
       rect:
         serializedVersion: 2
-        x: 540
-        y: 0
-        width: 198
-        height: 917
+        x: 750
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76f1e573886389341bf0f56c3471a7be
-      internalID: 509970989
+      spriteID: 4a0d331dd05fbbe418e275924b93efd0
+      internalID: 589413888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: Lab equipment_3
       rect:
         serializedVersion: 2
-        x: 810
-        y: 0
-        width: 177
-        height: 917
+        x: 1125
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 342d9ffb184d11541a91ad95f4eaf5bb
-      internalID: 971998604
+      spriteID: 6a1183a1ea658c549b21c79b86a35b3d
+      internalID: 2119096525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: Lab equipment_4
       rect:
         serializedVersion: 2
-        x: 1055
-        y: 0
-        width: 170
-        height: 917
+        x: 0
+        y: 375
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 997504331d0f59e43908cbc3f6b33701
-      internalID: 1277040580
+      spriteID: 956995a6e59840649a346fff63f3d55c
+      internalID: 1317240840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_5
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 375
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f93294c9972234ebff277262fef7c3
+      internalID: -1259826065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_6
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 375
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a890df107e572d4ab7e25c934cd3d65
+      internalID: -1136417567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_7
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 375
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b079c157f913dde42bf8e31d330ad382
+      internalID: -359065271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cee08f4f1d4364297b8833b9c99b46
+      internalID: 174866752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_9
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de124ea91a23a934096808b57c538bb1
+      internalID: 377708671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_10
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10b3eec37abb1b4bacce183c365ef12
+      internalID: -207395666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab equipment_11
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cae9fc3598e6c04d86e5ce1f39c0799
+      internalID: 1612726921
       vertices: []
       indices: 
       edges: []
@@ -238,19 +385,26 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 23713d1cfeac21a4ba26fe1f08e56a13
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_4: 1277040580
-      Idle_1: -2105731935
-      Idle_3: 971998604
-      Idle_0: 590257435
-      Idle_2: 509970989
+      Lab equipment_3: 2119096525
+      Lab equipment_1: -1767611840
+      Lab equipment_0: -864408254
+      Lab equipment_10: -207395666
+      Lab equipment_4: 1317240840
+      Lab equipment_6: -1136417567
+      Lab equipment_5: -1259826065
+      Lab equipment_11: 1612726921
+      Lab equipment_8: 174866752
+      Lab equipment_9: 377708671
+      Lab equipment_2: 589413888
+      Lab equipment_7: -359065271
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits Folder/Siena's Credits.unity
     guid: bb8951210f99283488b6b6cdec967004
+  - enabled: 1
+    path: Assets/Scenes/Lose Screen.unity
+    guid: bfd71623d1b18fc428419a95bc1ad17c
+  - enabled: 1
+    path: Assets/Scenes/Win Screen.unity
+    guid: a57890f91cfb4b64f8384599278d1fea
   m_configObjects: {}
