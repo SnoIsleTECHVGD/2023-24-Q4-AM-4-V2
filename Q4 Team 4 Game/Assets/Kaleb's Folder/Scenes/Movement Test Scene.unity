@@ -862,6 +862,7 @@ GameObject:
   - component: {fileID: 1270549482}
   - component: {fileID: 1270549485}
   - component: {fileID: 1270549486}
+  - component: {fileID: 1270549488}
   - component: {fileID: 1270549487}
   m_Layer: 0
   m_Name: Player
@@ -1007,8 +1008,30 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpbool: 5
+  jumpbool: 2
 --- !u!114 &1270549487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270549481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a848f21934498d4fb6969a4c340aebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+  baseDamage: 0
+  damage: 0
+  hasEatenJFruit: 0
+  hasEatenGFruit: 0
+  hasEatenFFruit: 0
+  hasEatenAGFruit: 0
+  fruitTimer: 0
+  timer: {fileID: 0}
+--- !u!114 &1270549488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1020,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdeb1c840eb23ab4e8f2efaccae8ef33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1270549481}
 --- !u!1 &1345236184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,7 +1168,7 @@ GameObject:
   - component: {fileID: 1958560822}
   - component: {fileID: 1958560825}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: Jump Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

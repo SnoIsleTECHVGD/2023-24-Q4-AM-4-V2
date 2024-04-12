@@ -23,7 +23,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] TextMeshProUGUI timer;
 
     
-    /* Damage player
+    Damage player
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.GetComponent("EnemyStats") as EnemyStats) != null)
@@ -50,7 +50,7 @@ public class PlayerStats : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.color = Color.white;
         
     }
-    */
+    
 
     // Start is called before the first frame update
     void Start()
