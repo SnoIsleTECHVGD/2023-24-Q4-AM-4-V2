@@ -6,19 +6,26 @@ public class JumpFruit : MonoBehaviour
 {
     public GameObject player;
     private bool on = false;
+    private Movement m;
+
+    void Start()
+    {
+        m = player.GetComponent<Movement>();
+    }
 
     void Update()
     {
 
     }
-    OnCollisionEnter2D()
+    void OnCollisionEnter2D()
     {
         Debug.Log("FASF");
         on = true;
         if (on = true)
         {
-            player.Movement.Jumpbool = 2 * player.Movement.Jumpbool;
+            m.jumpbool = 2 * m.jumpbool;
             on = false;
         }
     }
+    
 }
