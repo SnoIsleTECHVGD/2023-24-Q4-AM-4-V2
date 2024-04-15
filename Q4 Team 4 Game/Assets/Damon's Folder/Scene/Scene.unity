@@ -255,6 +255,7 @@ MonoBehaviour:
   hasEatenAGFruit: 0
   fruitTimer: 0
   timer: {fileID: 1196903243}
+  healthBar: {fileID: 0}
 --- !u!114 &3043572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +486,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1196903242}
+  - {fileID: 1308628612}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -767,6 +769,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &363078075
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 198216957}
+    m_Modifications:
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -566
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426413576679107944, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_Name
+      value: Healthbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616924328835603182, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616924328835603182, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616924328835603182, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
 --- !u!1001 &373580416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1209,6 +1282,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196903241}
   m_CullTransparentMesh: 1
+--- !u!4 &1308628612 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 869137897307493828, guid: 23cdbe9be5549324e846181a128fb8d5, type: 3}
+  m_PrefabInstance: {fileID: 363078075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1360900882
 GameObject:
   m_ObjectHideFlags: 0

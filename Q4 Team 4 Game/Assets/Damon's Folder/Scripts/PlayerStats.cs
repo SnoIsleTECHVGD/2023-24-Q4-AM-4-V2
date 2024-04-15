@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -20,10 +21,11 @@ public class PlayerStats : MonoBehaviour
     public bool hasEatenAGFruit;
 
     public float fruitTimer;
-    [SerializeField] TextMeshProUGUI timer;
+    [SerializeField] TextMeshProUGUI timer; 
+    public Image healthBar;
 
-    
-   
+
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.GetComponent("EnemyStats") as EnemyStats) != null)
@@ -33,6 +35,7 @@ public class PlayerStats : MonoBehaviour
             if (collision.gameObject.GetComponent<EnemyStats>().damageDealing >= 1)
             {
                 health -= collision.gameObject.GetComponent<EnemyStats>().damageDealing;
+               
                 gameObject.GetComponent<Renderer>().material.color = Color.red;
 
                 // Death

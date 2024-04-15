@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class EnemyStats : MonoBehaviour
 {
     
-    public Transform player;
+    public GameObject player;
     
     public int maxHealth;
     public int health;
@@ -23,7 +23,7 @@ public class EnemyStats : MonoBehaviour
     
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player");
         
     }
     // Start is called before the first frame update
@@ -44,6 +44,7 @@ public class EnemyStats : MonoBehaviour
         {
             health -= player.GetComponent<PlayerStats>().damage;
             TakeDamage(player.GetComponent<PlayerStats>().damage);
+            player.GetComponent<PlayerStats>().healthBar.fillAmount = (player.GetComponent<PlayerStats>().health * 1.0f) / player.GetComponent<PlayerStats>().maxHealth;
             DealDamage();
 
             if (player.GetComponent<PlayerStats>().health <= 0)
