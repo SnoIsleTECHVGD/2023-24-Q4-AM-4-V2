@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Movement;
 
 public class JumpFruit : MonoBehaviour
 {
@@ -8,14 +9,15 @@ public class JumpFruit : MonoBehaviour
     private float jumpNormal;
     private bool on = false;
     private float jumpInc;
-    private Movement m;
+    private float m;
     private PlayerStats stats;
 
     void Start()
     {
-        m = player.GetComponent<Movement>();
-        jumpInc = 2 * m.jumpheight;
-        jumpNormal = m.jumpheight;
+        GameObject.FindWithTag("Player");
+        m = player.GetComponent<Movement>().jumpheight;
+        jumpInc = 2 * m;
+        jumpNormal = m;
         stats = player.GetComponent<PlayerStats>();
     }
 
@@ -23,16 +25,19 @@ public class JumpFruit : MonoBehaviour
     {
         if (stats.hasEatenJFruit == false)
         {
-            m.jumpheight = jumpNormal;
+            m = jumpNormal;
+            player.GetComponent<Movement>().jumpheight = m;
         }
     }
     void OnCollisionEnter2D()
     {
-        Debug.Log("FASF");
         on = true;
         if (on == true)
         {
-            m.jumpheight = jumpInc;
+            player.GetComponent<PlayerStats>().hasEatenJFruit = true;
+            player.GetComponent<PlayerStats>().fruitTimer = 30f;
+            m = jumpInc;
+            player.GetComponent<Movement>().jumpheight = m;
             on = false;
         }
     }
