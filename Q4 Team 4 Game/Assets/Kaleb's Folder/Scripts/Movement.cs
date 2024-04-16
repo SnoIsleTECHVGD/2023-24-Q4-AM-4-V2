@@ -5,9 +5,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public KeyCode left, right, jump;
+    public GameObject player;
     public float buildup = 1, jumpheight = 1, maxspeed = 1;
+
     private Rigidbody2D rb2D;
     private BoxCollider2D b2D;
+
     public bool WASD = false;
     public LayerMask groundLayer;
     public float jumpbool;
@@ -18,6 +21,7 @@ public class Movement : MonoBehaviour
     private float xVelocity;
     private bool antiGravity = false;
     private bool fhq = false;
+    private bool qhf = true;
 
     private void Start()
     {
@@ -96,6 +100,16 @@ public class Movement : MonoBehaviour
             cooldown = 0.2f;
         }
         rb2D.velocity = new Vector2(Mathf.Clamp(rb2D.velocity.x, -maxspeed, maxspeed), rb2D.velocity.y);
+        // Anti-Gravity Fruit
+        if (player.GetComponent<PlayerStats>().hasEatenAGFruit == true && qhf == true)
+        {
+            antiGravity = !antiGravity;
+            qhf = false;
+        }
+        if (player.GetComponent<PlayerStats>().hasEatenAGFruit == false)
+        {
+            qhf = true;
+        }
     }
     public void WASDswap(bool WASDon)
     {
