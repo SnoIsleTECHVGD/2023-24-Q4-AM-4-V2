@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public KeyCode left, right, jump;
-    public GameObject player;
+    public GameObject player, camera;
     public float buildup = 1, jumpheight = 1, maxspeed = 1;
 
     private Rigidbody2D rb2D;
@@ -14,11 +14,16 @@ public class Movement : MonoBehaviour
     public bool WASD = false;
     public LayerMask groundLayer;
     public float jumpbool;
-    private bool grounded => Physics2D.BoxCast(transform.position - new Vector3(0f, 0.51f), new Vector2(jumpbool, jumpbool), 0, Vector2.zero, 1, groundLayer);
+    private bool grounded()
+    {
+        return Physics2D.BoxCast(transform.position - new Vector3(0f, 0.51f), new Vector2(jumpbool, jumpbool), 0, Vector2.zero, 1, groundLayer);
+    }
     private bool jumpHeld;
     private float timeSinceJump = -5;
     float cooldown = 0.2f;
     private float xVelocity;
+    private float camAndPlayDist;
+    private float camPos;
     private bool antiGravity = false;
     private bool fhq = false;
     private bool qhf = true;
@@ -73,7 +78,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (grounded && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded))
+        if (grounded() && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded()))
         {
             xVelocity = rb2D.velocity.x;
             rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
@@ -88,21 +93,28 @@ public class Movement : MonoBehaviour
         else { jumpHeld = false; }
 
 
-        if (!jumpHeld && !grounded && rb2D.velocity.y > 0 && !fhq)
+        if (!jumpHeld && !grounded() && rb2D.velocity.y > 0 && !fhq)
         {
             xVelocity = rb2D.velocity.x;
             rb2D.velocity = new Vector3(xVelocity, 0, 0);
         }
 
-        if (Input.GetKeyDown(jump) && !grounded)
+        if (Input.GetKeyDown(jump) && !grounded())
         {
             timeSinceJump = Time.time;
             cooldown = 0.2f;
         }
         rb2D.velocity = new Vector2(Mathf.Clamp(rb2D.velocity.x, -maxspeed, maxspeed), rb2D.velocity.y);
-        // Anti-Gravity Fruit
+        // Anti-Gravity Fruit functionality
+
         if (player.GetComponent<PlayerStats>().hasEatenAGFruit == true && qhf == true)
         {
+            camAndPlayDist = camera.transform.position.x - player.transform.position.x;
+            camera.transform.Rotate(0f, 0f, 180f);
+            player.transform.Rotate(0f, 0f, 180f);
+            camPos = camera.transform.position.x + (2 * camAndPlayDist);
+            camera.transform.position += new Vector3(2 * camAndPlayDist, 0, 0);
+            grounded => Physics2D.BoxCast(transform.position + new Vector3(0f, 0.51f), new Vector2(jumpbool, jumpbool), 0, Vector2.zero, 1, groundLayer);
             antiGravity = !antiGravity;
             qhf = false;
         }
