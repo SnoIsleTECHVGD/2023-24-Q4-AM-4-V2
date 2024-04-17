@@ -17,7 +17,10 @@ public class PlayerStats : MonoBehaviour
 
     public bool hasEatenJFruit;
     public bool hasEatenGFruit;
+
     public bool hasEatenFFruit;
+    public GameObject fireAttack;
+
     public bool hasEatenAGFruit;
 
     public float fruitTimer;
@@ -64,12 +67,24 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-      if (fruitTimer > 0)
-      {
+       
+        if (Input.GetMouseButtonDown(0) && hasEatenFFruit)
+        {
+            fireAttack.SetActive(true);
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            fireAttack.SetActive(false);
+        }
+        
+        
+        
+        
+        if (fruitTimer > 0)
+        {
             fruitTimer -= Time.smoothDeltaTime;
             timer.text =  fruitTimer.ToString();
-      }
+        }
 
       else
       {
@@ -90,7 +105,8 @@ public class PlayerStats : MonoBehaviour
           hasEatenJFruit = false;
         }
         fruitTimer = 0f;
-            timer.text = "";
-      }
+        timer.text = "";
+        fireAttack.SetActive(false);
+        }
     }
 }
