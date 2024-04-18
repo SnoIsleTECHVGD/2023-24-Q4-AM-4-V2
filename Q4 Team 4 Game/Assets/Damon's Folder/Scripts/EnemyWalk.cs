@@ -8,6 +8,8 @@ public class EnemyWalk : MonoBehaviour
 
     Rigidbody2D myRigidbody;
 
+    float inputHorizontal;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,28 @@ public class EnemyWalk : MonoBehaviour
         else
         {
             myRigidbody.velocity = new Vector2(-speed, 0f);
+        }
+
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (inputHorizontal > 0)
+        {
+            GetComponent<Animator>().SetInteger("State", 1);
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            GetComponent<Animator>().SetInteger("State", 0);
+        }
+
+        if (inputHorizontal < 0)
+        {
+            GetComponent<Animator>().SetInteger("State", 2);
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            GetComponent<Animator>().SetInteger("State", 0);
         }
     }
     private bool IsFacingRight()
