@@ -516,7 +516,7 @@ Animator:
   m_GameObject: {fileID: 41780670}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c52664003b60ac44ab6207884c219aac, type: 2}
+  m_Controller: {fileID: 9100000, guid: 764a48c70ee3d0e42ba897407e858315, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1168,7 +1168,7 @@ Animator:
   m_GameObject: {fileID: 110947796}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c52664003b60ac44ab6207884c219aac, type: 2}
+  m_Controller: {fileID: 9100000, guid: 764a48c70ee3d0e42ba897407e858315, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2676,7 +2676,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4ad4f97c925ad8c45a0691a81aa761a1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2991,7 +2991,7 @@ Animator:
   m_GameObject: {fileID: 464273499}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c52664003b60ac44ab6207884c219aac, type: 2}
+  m_Controller: {fileID: 9100000, guid: 764a48c70ee3d0e42ba897407e858315, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3174,8 +3174,8 @@ MonoBehaviour:
   jump: 32
   player: {fileID: 471803793}
   camera: {fileID: 0}
-  buildup: 10
-  jumpheight: 10
+  buildup: 8
+  jumpheight: 30
   maxspeed: 5
   WASD: 0
   groundLayer:
@@ -3195,7 +3195,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23031658, y: -0.09633231}
+  m_Offset: {x: 0.23031658, y: -0.23269963}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3206,7 +3206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8048736, y: 8.490099}
+  m_Size: {x: 1.8048736, y: 8.217365}
   m_EdgeRadius: 0
 --- !u!50 &471803797
 Rigidbody2D:
@@ -3221,9 +3221,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3336,7 +3336,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26999998, y: -0.05397916}
+  m_Offset: {x: 0.26999998, y: -0.24716556}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3347,7 +3347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.18, y: 8.645512}
+  m_Size: {x: 2.18, y: 8.259138}
   m_EdgeRadius: 0
 --- !u!114 &471803802
 MonoBehaviour:
@@ -3376,6 +3376,7 @@ GameObject:
   - component: {fileID: 477066008}
   - component: {fileID: 477066007}
   - component: {fileID: 477066006}
+  - component: {fileID: 477066011}
   m_Layer: 0
   m_Name: Fruit Location (fire) (3)
   m_TagString: Untagged
@@ -3397,6 +3398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Fire Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &477066007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,6 +3507,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477066011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477066005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &489364008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,6 +4485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Jump Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &620158091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4731,7 +4747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5667bd26bf7e54baae3e71da3ab714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!212 &652337450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4899,7 +4914,7 @@ Animator:
   m_GameObject: {fileID: 663262125}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c52664003b60ac44ab6207884c219aac, type: 2}
+  m_Controller: {fileID: 9100000, guid: 764a48c70ee3d0e42ba897407e858315, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7606,7 +7621,7 @@ Animator:
   m_GameObject: {fileID: 1125565738}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c52664003b60ac44ab6207884c219aac, type: 2}
+  m_Controller: {fileID: 9100000, guid: 764a48c70ee3d0e42ba897407e858315, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8083,7 +8098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5667bd26bf7e54baae3e71da3ab714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!212 &1190775039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33835,6 +33849,7 @@ GameObject:
   - component: {fileID: 1457570174}
   - component: {fileID: 1457570176}
   - component: {fileID: 1457570175}
+  - component: {fileID: 1457570177}
   m_Layer: 0
   m_Name: Fruit Location (fire) (2)
   m_TagString: Untagged
@@ -33949,6 +33964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Fire Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &1457570176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33964,6 +33980,19 @@ MonoBehaviour:
   posA: {fileID: 1164017439}
   posB: {fileID: 74567366}
   speed: 1
+--- !u!114 &1457570177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457570170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1462382096
 GameObject:
   m_ObjectHideFlags: 0
@@ -34025,6 +34054,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 271033489}
   m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1473601052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1473601055}
+  - component: {fileID: 1473601054}
+  - component: {fileID: 1473601053}
+  m_Layer: 0
+  m_Name: Enemy Walk Sprite Sheet_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1473601053
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473601052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 764a48c70ee3d0e42ba897407e858315, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1473601054
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473601052}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1892063190, guid: 2a7c26ebd57bbf944855383ae86850ae, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16933334, y: 0.5681948}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1473601055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473601052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.0281, y: -9.228728, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 116
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1491975392
 GameObject:
@@ -34384,6 +34518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Fire Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &1500359940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35570,6 +35705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Jump Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &1641690532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89342,6 +89478,111 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1662792335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662792338}
+  - component: {fileID: 1662792337}
+  - component: {fileID: 1662792336}
+  m_Layer: 0
+  m_Name: Enemy Walk Sprite Sheet_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1662792336
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662792335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c31f4ad3d9848349b6cb0052acd6341, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1662792337
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662792335}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1892063190, guid: 2a7c26ebd57bbf944855383ae86850ae, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16933334, y: 0.5681948}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1662792338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662792335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.37024, y: 21.097488, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 117
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1665062116
 GameObject:
   m_ObjectHideFlags: 0
@@ -89699,6 +89940,7 @@ GameObject:
   - component: {fileID: 1703284467}
   - component: {fileID: 1703284469}
   - component: {fileID: 1703284468}
+  - component: {fileID: 1703284470}
   m_Layer: 0
   m_Name: Fruit Location (fire) (1)
   m_TagString: Untagged
@@ -89813,6 +90055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Fire Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &1703284469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89828,6 +90071,19 @@ MonoBehaviour:
   posA: {fileID: 945974599}
   posB: {fileID: 405477054}
   speed: 1
+--- !u!114 &1703284470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703284464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1711352144
 GameObject:
   m_ObjectHideFlags: 0
@@ -90740,8 +90996,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756385290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6826, y: 0.715, z: 0}
-  m_LocalScale: {x: 3.3251, y: 1.431, z: 1}
+  m_LocalPosition: {x: 3.0145, y: 0.715, z: 0}
+  m_LocalScale: {x: 3.9890888, y: 1.431, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 471803799}
@@ -92624,6 +92880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: Jump Fruit
   respawn: 1
+  dead: 0
 --- !u!114 &1971784240
 MonoBehaviour:
   m_ObjectHideFlags: 0
