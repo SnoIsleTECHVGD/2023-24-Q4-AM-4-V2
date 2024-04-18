@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,7 +24,11 @@ public class FireFruit : MonoBehaviour
         {
 
             collision.GetComponent<EnemyStats>().health -= player.GetComponent<PlayerStats>().damage;
-            
+
+            if(collision.GetComponent<EnemyStats>().health <= 0)
+            {
+                Destroy(collision);
+            }
         }
     }
 }
