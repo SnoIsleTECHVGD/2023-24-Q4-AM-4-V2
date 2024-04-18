@@ -134,12 +134,12 @@ TextureImporter:
       name: Enemy Walk Animation_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 275.375
-        height: 917
+        x: 59
+        y: 32
+        width: 208
+        height: 843
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: Enemy Walk Animation_1
       rect:
         serializedVersion: 2
-        x: 275
-        y: 0
-        width: 275.375
-        height: 917
+        x: 313
+        y: 24
+        width: 213
+        height: 893
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: Enemy Walk Animation_2
       rect:
         serializedVersion: 2
-        x: 550
-        y: 0
-        width: 275.375
-        height: 917
+        x: 596
+        y: 18
+        width: 209
+        height: 881
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Enemy Walk Animation_3
       rect:
         serializedVersion: 2
-        x: 825
-        y: 0
-        width: 275.375
-        height: 917
+        x: 877
+        y: 18
+        width: 209
+        height: 880
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: Enemy Walk Animation_4
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 0
-        width: 252
-        height: 917
+        x: 1110
+        y: 29
+        width: 247
+        height: 845
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,11 +240,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1358
-        y: 0
-        width: 232
-        height: 917
+        y: 29
+        width: 254
+        height: 849
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,11 +261,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1608
-        y: 0
-        width: 231
-        height: 917
+        y: 43
+        width: 257
+        height: 848
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,11 +282,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1875
-        y: 0
-        width: 226
-        height: 917
+        y: 46
+        width: 246
+        height: 849
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
