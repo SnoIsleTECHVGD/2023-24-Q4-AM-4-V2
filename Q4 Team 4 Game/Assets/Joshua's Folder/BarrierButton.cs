@@ -36,6 +36,7 @@ public class BarrierButton : MonoBehaviour
            if (GetComponent<BoxCollider2D>().isTrigger == true)
            {
                 ButtonIsTriggered = true;
+                GetComponent<Animator>().SetInteger("State", 1);
            }
 
             targetPos = posB.position;

@@ -114,7 +114,7 @@ public class Movement : MonoBehaviour
             player.transform.Rotate(0f, 0f, 180f);
             camPos = camera.transform.position.x + (2 * camAndPlayDist);
             camera.transform.position += new Vector3(2 * camAndPlayDist, 0, 0);
-            grounded => Physics2D.BoxCast(transform.position + new Vector3(0f, 0.51f), new Vector2(jumpbool, jumpbool), 0, Vector2.zero, 1, groundLayer);
+            // Physics2D.BoxCast(transform.position + new Vector3(0f, 0.51f));
             antiGravity = !antiGravity;
             qhf = false;
         }
