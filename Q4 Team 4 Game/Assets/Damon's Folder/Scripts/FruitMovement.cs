@@ -17,10 +17,13 @@ public class FruitMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, posA.position) < .1f) targetPos = posB.position;
+        if (gameObject.GetComponent<Eat>().dead == false)
+        {
+            if (Vector2.Distance(transform.position, posA.position) < .1f) targetPos = posB.position;
 
-        if (Vector2.Distance(transform.position, posB.position) < .1f) targetPos = posA.position;
+            if (Vector2.Distance(transform.position, posB.position) < .1f) targetPos = posA.position;
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        }   
     }
 }
