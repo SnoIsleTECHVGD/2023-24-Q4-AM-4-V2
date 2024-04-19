@@ -23,7 +23,7 @@ public class JumpFruit : MonoBehaviour
 
     void Update()
     {
-        if (stats.hasEatenJFruit == false)
+        if (stats.hasEatenJFruit == false && stats.hasEatenAGFruit == false)
         {
             m = jumpNormal;
             player.GetComponent<Movement>().jumpheight = m;
