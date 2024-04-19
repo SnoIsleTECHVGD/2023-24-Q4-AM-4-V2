@@ -249,7 +249,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   baseDamage: 20
-  damage: 20
+  damage: 3
   hasEatenJFruit: 0
   hasEatenGFruit: 0
   hasEatenFFruit: 0
@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: aeefdf53f06aa2b4d884d38afea8161e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: aeefdf53f06aa2b4d884d38afea8161e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -975,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: 86d38829d6a18914d8fd37f1ecdea67b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: 86d38829d6a18914d8fd37f1ecdea67b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1221,7 +1221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: f86ba375e78856842a3853918c0ebedf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: f86ba375e78856842a3853918c0ebedf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1334,9 +1334,9 @@ RectTransform:
   m_Father: {fileID: 198216957}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 381.5, y: 225.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -117, y: -46}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196903243
@@ -1585,7 +1585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360900882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -2, z: 0}
+  m_LocalPosition: {x: 8.99, y: 0.78, z: 0}
   m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

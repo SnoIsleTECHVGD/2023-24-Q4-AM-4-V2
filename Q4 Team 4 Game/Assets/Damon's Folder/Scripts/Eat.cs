@@ -108,7 +108,7 @@ public class Eat : MonoBehaviour
         if (gameObject.transform.position == death)
         {
             respawn += Time.deltaTime;
-            if (respawn >= 60)
+            if (respawn >= 30)
             {
                 dead = false;
                 respawn = 0f;

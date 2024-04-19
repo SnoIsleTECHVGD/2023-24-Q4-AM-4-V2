@@ -27,7 +27,7 @@ public class FireFruit : MonoBehaviour
 
             if(collision.GetComponent<EnemyStats>().health <= 0)
             {
-                Destroy(collision);
+                Destroy(collision.gameObject);
             }
         }
     }
