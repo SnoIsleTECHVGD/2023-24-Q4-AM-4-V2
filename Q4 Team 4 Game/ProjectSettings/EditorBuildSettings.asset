@@ -38,7 +38,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win Screen.unity
     guid: a57890f91cfb4b64f8384599278d1fea
-  - enabled: 1
-    path: Assets/Damon's Folder/Scene/Scene.unity
-    guid: 45c788cf80a96ed4b87dee7a327fb865
   m_configObjects: {}

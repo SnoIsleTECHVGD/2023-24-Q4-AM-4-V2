@@ -23,24 +23,30 @@ public class EnemyWalk : MonoBehaviour
     {
     if (IsFacingRight())
         {
+            GetComponent<Animator>().SetInteger("State", 1);
             myRigidbody.velocity = new Vector2(speed, 0f);
         }  
-        else
+        else if (!IsFacingRight())
         {
+            GetComponent<Animator>().SetInteger("State", 2);
             myRigidbody.velocity = new Vector2(-speed, 0f);
         }
-
+    else
+        {
+            GetComponent<Animator>().SetInteger("State", 0);
+        }
+    
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
+       
+        inputHorizontal = Input.GetAxisRaw("Horizontal"); 
 
         if (inputHorizontal > 0)
         {
             GetComponent<Animator>().SetInteger("State", 1);
-            gameObject.transform.localScale = new Vector3(0.6092f, 0.4288f, 1);
+            gameObject.transform.localScale = new Vector3(0.6092f, 0.4288f);
         }
         else
         {
@@ -50,12 +56,13 @@ public class EnemyWalk : MonoBehaviour
         if (inputHorizontal < 0)
         {
             GetComponent<Animator>().SetInteger("State", 2);
-            gameObject.transform.localScale = new Vector3(-0.6092f, 0.4288f, 1);
+            gameObject.transform.localScale = new Vector3(-0.6092f, 0.4288f);
         }
         else
         {
             GetComponent<Animator>().SetInteger("State", 0);
         }
+    
     }
     private bool IsFacingRight()
     {

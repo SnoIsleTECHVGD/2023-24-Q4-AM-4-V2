@@ -44,6 +44,7 @@ public class PlayerStats : MonoBehaviour
                 // Death
                 if (health <= 0)
                 {
+                    gameObject.GetComponent<Renderer>().material.color = Color.white;
                     SceneManager.LoadScene("Lose Screen");
                 }
             }
