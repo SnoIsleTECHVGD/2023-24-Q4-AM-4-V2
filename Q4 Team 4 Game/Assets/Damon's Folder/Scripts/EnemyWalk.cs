@@ -21,6 +21,7 @@ public class EnemyWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
     if (IsFacingRight())
         {
             GetComponent<Animator>().SetInteger("State", 1);
@@ -35,7 +36,7 @@ public class EnemyWalk : MonoBehaviour
         {
             GetComponent<Animator>().SetInteger("State", 0);
         }
-    
+    */
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
