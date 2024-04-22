@@ -1032,6 +1032,7 @@ MonoBehaviour:
   hasEatenJFruit: 0
   hasEatenGFruit: 0
   hasEatenFFruit: 0
+  fireAttack: {fileID: 728670153}
   hasEatenAGFruit: 0
   fruitTimer: 0
   timer: {fileID: 1485284850}

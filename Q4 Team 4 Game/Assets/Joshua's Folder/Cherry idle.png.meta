@@ -137,7 +137,7 @@ TextureImporter:
         x: 63
         y: 30
         width: 206
-        height: 887
+        height: 846
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,7 +158,7 @@ TextureImporter:
         x: 288
         y: 26
         width: 207
-        height: 891
+        height: 855
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Cherry idle_2
       rect:
         serializedVersion: 2
-        x: 513
+        x: 514
         y: 31
-        width: 209
-        height: 886
+        width: 208
+        height: 859
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Cherry idle_3
       rect:
         serializedVersion: 2
-        x: 750
-        y: 33
+        x: 751
+        y: 32
         width: 210
-        height: 884
+        height: 866
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: Cherry idle_4
       rect:
         serializedVersion: 2
-        x: 968
+        x: 975
         y: 33
-        width: 218
-        height: 884
+        width: 211
+        height: 862
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Cherry idle_5
       rect:
         serializedVersion: 2
-        x: 1199
+        x: 1204
         y: 29
-        width: 212
-        height: 888
+        width: 207
+        height: 851
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Cherry idle_6
       rect:
         serializedVersion: 2
-        x: 1433
+        x: 1436
         y: 34
-        width: 212
-        height: 883
+        width: 209
+        height: 845
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
