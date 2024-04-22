@@ -49,6 +49,7 @@ public class EnemyStats : MonoBehaviour
 
             if (player.GetComponent<PlayerStats>().health <= 0)
             {
+                
                 SceneManager.LoadScene("Lose Screen");
             }
         } 
@@ -59,6 +60,7 @@ public class EnemyStats : MonoBehaviour
 
         if (health <= 0)
             DestroyEnemy();
+        
     }
     private void DestroyEnemy()
     {
