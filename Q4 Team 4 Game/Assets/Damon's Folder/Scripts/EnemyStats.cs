@@ -9,6 +9,7 @@ public class EnemyStats : MonoBehaviour
 {
     
     public GameObject player;
+    public GameObject fire;
     
     public int maxHealth;
     public int health;
@@ -38,9 +39,9 @@ public class EnemyStats : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == player.gameObject)
+        if (collision.gameObject == fire.gameObject)
         {
             health -= player.GetComponent<PlayerStats>().damage;
             TakeDamage(player.GetComponent<PlayerStats>().damage);
@@ -69,9 +70,9 @@ public class EnemyStats : MonoBehaviour
 
     public void DealDamage()
     {
-        gameObject.GetComponent<Renderer>().material.color = Color.red;
+        player.GetComponent<Renderer>().material.color = Color.red;
         player.GetComponent<PlayerStats>().health -= damageDealing;
 
-        gameObject.GetComponent<Renderer>().material.color = Color.white;
+        player.GetComponent<Renderer>().material.color = Color.white;
     }
 }
