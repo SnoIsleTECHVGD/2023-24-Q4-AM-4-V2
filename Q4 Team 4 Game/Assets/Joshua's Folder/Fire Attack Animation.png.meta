@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30a6e7a42e2855042ad39245804ff87e
+guid: cea69b789e96d774e81113c19b76e14e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Fire Attack Animation_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 427
-        height: 917
+        width: 189
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c82b4972660d0e4aa0a3bfbc97ade03
-      internalID: 418903510
+      spriteID: 3b1776e75ab73ff4685bc817fb36f4ac
+      internalID: -1777689053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Fire Attack Animation_1
       rect:
         serializedVersion: 2
-        x: 427
+        x: 233
         y: 0
-        width: 427
-        height: 917
+        width: 223
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f1875d50ba92f4081eae1b30741329
-      internalID: 119999942
+      spriteID: c7a0e5f628105dd4e8f9c60f273b7205
+      internalID: -2092181782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Fire Attack Animation_2
       rect:
         serializedVersion: 2
-        x: 854
+        x: 542
         y: 0
-        width: 427
-        height: 917
+        width: 257
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9427a7d8e8833ef4f9c93d48723460f0
-      internalID: -1503224889
+      spriteID: a8d15cb6726a3d8488b58f350c520e43
+      internalID: -421978219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_3
+      name: Fire Attack Animation_3
       rect:
         serializedVersion: 2
-        x: 1281
+        x: 868
         y: 0
-        width: 427
-        height: 917
+        width: 318
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c19f1013172d147a2a04b9e4947371
-      internalID: 2072752392
+      spriteID: 7832c7acc77166542bd16cdb4ae28228
+      internalID: 1935089425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_4
+      name: Fire Attack Animation_4
       rect:
         serializedVersion: 2
-        x: 1708
+        x: 1230
         y: 0
-        width: 427
-        height: 917
+        width: 325
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5333e7e79dc662046ab64d6b0d3af378
-      internalID: 185807430
+      spriteID: a832f57ac027a4e49852731b655f8cb1
+      internalID: -1216040987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_5
+      name: Fire Attack Animation_5
       rect:
         serializedVersion: 2
-        x: 2135
+        x: 1612
         y: 0
-        width: 427
-        height: 917
+        width: 406
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca73e251aeb86649849a70b2fcf04cb
-      internalID: 1268746302
+      spriteID: d5c10d507e30ec44e9f4ab75ec432971
+      internalID: 729495094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_6
+      name: Fire Attack Animation_6
       rect:
         serializedVersion: 2
-        x: 2562
+        x: 2075
         y: 0
-        width: 427
-        height: 917
+        width: 480
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,41 +271,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b807723357b97fa498cb06bbc115c7c2
-      internalID: -1860746397
+      spriteID: 926b280368ca38e438d42c673eb51631
+      internalID: 1195531911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_7
+      name: Fire Attack Animation_7
       rect:
         serializedVersion: 2
-        x: 2989
+        x: 2618
         y: 0
-        width: 427
-        height: 917
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 521
+        height: 268
+      alignment: 9
+      pivot: {x: 0.49299657, y: 0.49999988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e738ec28fc0a7074299d693a679a825b
-      internalID: 1584301869
+      spriteID: eb26673858533204cad359feafe8733b
+      internalID: 1016434837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_8
+      name: Fire Attack Animation_8
       rect:
         serializedVersion: 2
-        x: 3416
+        x: 3197
         y: 0
-        width: 427
-        height: 917
+        width: 521
+        height: 268
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +313,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4104948e3859c1f49aa5d315f45ea68a
-      internalID: -1312601851
+      spriteID: b0c532b8d4ee6804bbb181126ec63ef6
+      internalID: 1464452619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Attack Animation_9
+      rect:
+        serializedVersion: 2
+        x: 3846
+        y: 0
+        width: 626
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f7567fa7a8a1242852a1a3b2258b88
+      internalID: 431492119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Attack Animation_10
+      rect:
+        serializedVersion: 2
+        x: 4557
+        y: 0
+        width: 733
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e869763d49efd49b8042bad041aa68
+      internalID: 1557956916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Attack Animation_11
+      rect:
+        serializedVersion: 2
+        x: 5435
+        y: 0
+        width: 764
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336421769312ed144892d196e5252c84
+      internalID: -655923724
       vertices: []
       indices: 
       edges: []
@@ -322,7 +385,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 316a3df7091eb7c4994d65f2fcc6cc19
+    spriteID: ae7d210909470c747b1765a09350e1f7
     internalID: 0
     vertices: []
     indices: 
@@ -330,15 +393,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_3: 2072752392
-      Jump_1: 119999942
-      Jump_2: -1503224889
-      Jump_5: 1268746302
-      Jump_6: -1860746397
-      Jump_8: -1312601851
-      Jump_4: 185807430
-      Jump_7: 1584301869
-      Jump_0: 418903510
+      Fire Attack Animation_7: 1016434837
+      Fire Attack Animation_11: -655923724
+      Fire Attack Animation_1: -2092181782
+      Fire Attack Animation_0: -1777689053
+      Fire Attack Animation_10: 1557956916
+      Fire Attack Animation_5: 729495094
+      Fire Attack Animation_3: 1935089425
+      Fire Attack Animation_6: 1195531911
+      Fire Attack Animation_4: -1216040987
+      Fire Attack Animation_8: 1464452619
+      Fire Attack Animation_9: 431492119
+      Fire Attack Animation_2: -421978219
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

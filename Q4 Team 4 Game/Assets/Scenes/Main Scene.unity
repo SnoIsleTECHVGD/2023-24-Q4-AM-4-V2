@@ -3214,9 +3214,9 @@ MonoBehaviour:
   jump: 32
   player: {fileID: 471803793}
   camera: {fileID: 0}
-  buildup: 10
+  buildup: 40
   jumpheight: 20
-  maxspeed: 10
+  maxspeed: 40
   WASD: 0
   groundLayer:
     serializedVersion: 2
@@ -3559,7 +3559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 471803793}
 --- !u!1 &489364008
 GameObject:
   m_ObjectHideFlags: 0
@@ -34342,7 +34342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 471803793}
 --- !u!1 &1462382096
 GameObject:
   m_ObjectHideFlags: 0
@@ -34865,7 +34865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 471803793}
 --- !u!1 &1515366868
 GameObject:
   m_ObjectHideFlags: 0
@@ -90278,7 +90278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 471803793}
 --- !u!1 &1711352144
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 
     private Rigidbody2D rb2D;
     private BoxCollider2D b2D;
-
+    private SpriteRenderer spriteRenderer;
     public bool WASD = false;
     public LayerMask groundLayer;
     public float jumpbool;
@@ -31,15 +31,22 @@ public class Movement : MonoBehaviour
     private float aGravFloat = 1f;
     private float aGravFloat2 = 1f;
 
+    float inputHorizontal;
+
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         b2D = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+       rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
+       spriteRenderer.flipX = rb2D.velocity.x < 0f;
         // Everything Between The Green Is God Mode
+
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -61,83 +68,120 @@ public class Movement : MonoBehaviour
             if (Input.GetKey(left))
             {
                 rb2D.AddForce(Vector2.left * buildup);
+                GetComponent<Animator>().SetInteger("State", 1);
+            }
+            else
+            {
+                GetComponent<Animator>().SetInteger("State", 0);
             }
 
             if (Input.GetKey(right))
             {
                 rb2D.AddForce(Vector2.right * buildup);
+                GetComponent<Animator>().SetInteger("State", 1);
             }
-        }
-        else if (WASD == true)
-        {
-            if (Input.GetKey(KeyCode.A))
+            else
             {
-                rb2D.AddForce(Vector2.left * buildup);
+                GetComponent<Animator>().SetInteger("State", 0);
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (WASD == true)
             {
-                rb2D.AddForce(Vector2.right * buildup);
+                if (Input.GetKey(KeyCode.A))
+                {
+                    rb2D.AddForce(Vector2.left * buildup);
+                    GetComponent<Animator>().SetInteger("State", 2);
+                   
+                }
+                else
+                {
+                    GetComponent<Animator>().SetInteger("State", 0);
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rb2D.AddForce(Vector2.right * buildup);
+                    GetComponent<Animator>().SetInteger("State", 1);
+                   
+                }
+                else
+                {
+                    GetComponent<Animator>().SetInteger("State", 0);
+                }
             }
+
+            if (grounded() && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded()))
+            {
+               
+                xVelocity = rb2D.velocity.x;
+                rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
+                cooldown = 0f;
+               
+            }
+              
         }
 
-        if (grounded() && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded()))
-        {
-            xVelocity = rb2D.velocity.x;
-            rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
-            cooldown = 0f;
-        }
+            // Control jump height with length of jump held
+            if (Input.GetKey(jump))
+            {
+                jumpHeld = true;
+            if (jumpHeld == true)
+            {
+                Debug.Log("I want to scream");
+                GetComponent<Animator>().SetInteger("State", 3);
+            }
+            else
+            {
+                GetComponent<Animator>().SetInteger("State", 0);
+            }
+            }
+            else { jumpHeld = false; }
 
-        // Control jump height with length of jump held
-        if (Input.GetKey(jump))
-        {
-            jumpHeld = true;
-        }
-        else { jumpHeld = false; }
 
+            if ((player.GetComponent<PlayerStats>().hasEatenAGFruit == false && !jumpHeld && !grounded() && rb2D.velocity.y > 0 && !fhq) || (player.GetComponent<PlayerStats>().hasEatenAGFruit == true && !jumpHeld && !grounded() && rb2D.velocity.y < 0 && fhq))
+            {
+                xVelocity = rb2D.velocity.x;
+                rb2D.velocity = new Vector3(xVelocity, 0, 0);
+            }
 
-        if ((player.GetComponent<PlayerStats>().hasEatenAGFruit == false && !jumpHeld && !grounded() && rb2D.velocity.y > 0 && !fhq) || (player.GetComponent<PlayerStats>().hasEatenAGFruit == true && !jumpHeld && !grounded() && rb2D.velocity.y < 0 && fhq))
-        {
-            xVelocity = rb2D.velocity.x;
-            rb2D.velocity = new Vector3(xVelocity, 0, 0);
-        }
+            if (Input.GetKeyDown(jump) && !grounded())
+            {
+                timeSinceJump = Time.time;
+                cooldown = 0.2f;
+            }
+            rb2D.velocity = new Vector2(Mathf.Clamp(rb2D.velocity.x, -maxspeed, maxspeed), rb2D.velocity.y);
+            // Anti-Gravity Fruit functionality
 
-        if (Input.GetKeyDown(jump) && !grounded())
-        {
-            timeSinceJump = Time.time;
-            cooldown = 0.2f;
-        }
-        rb2D.velocity = new Vector2(Mathf.Clamp(rb2D.velocity.x, -maxspeed, maxspeed), rb2D.velocity.y);
-        // Anti-Gravity Fruit functionality
-
-        if ((player.GetComponent<PlayerStats>().hasEatenAGFruit == true && qhf == true) || aGravFloat % 2 == 0)
-        {
-            camAndPlayDist = camera.transform.position.x - player.transform.position.x;
-            camera.transform.Rotate(0f, 0f, 180f);
-            player.transform.Rotate(0f, 0f, 180f);
-            camPos = camera.transform.position.x + (2 * camAndPlayDist);
-            camera.transform.position += new Vector3(2 * camAndPlayDist, 0, 0);
-            boxCastFloat = -boxCastFloat;
-            antiGravity = !antiGravity;
-            jumpheight = -jumpheight;
-            qhf = false;
-            aGravFloat2 += 1;
-        }
-        if (aGravFloat2 % 2 == 0 && player.GetComponent<PlayerStats>().fruitTimer == 0f)
-        {
-            qhf = true;
-            aGravFloat += 1;
-            aGravFloat2 += 1;
-        }
-        if(aGravFloat >= 3)
-        {
-            aGravFloat = 1;
-            aGravFloat2 = 1;
-        }
+            if ((player.GetComponent<PlayerStats>().hasEatenAGFruit == true && qhf == true) || aGravFloat % 2 == 0)
+            {
+                camAndPlayDist = camera.transform.position.x - player.transform.position.x;
+                camera.transform.Rotate(0f, 0f, 180f);
+                player.transform.Rotate(0f, 0f, 180f);
+                camPos = camera.transform.position.x + (2 * camAndPlayDist);
+                camera.transform.position += new Vector3(2 * camAndPlayDist, 0, 0);
+                boxCastFloat = -boxCastFloat;
+                antiGravity = !antiGravity;
+                jumpheight = -jumpheight;
+                qhf = false;
+                aGravFloat2 += 1;
+            }
+            if (aGravFloat2 % 2 == 0 && player.GetComponent<PlayerStats>().fruitTimer == 0f)
+            {
+                qhf = true;
+                aGravFloat += 1;
+                aGravFloat2 += 1;
+            }
+            if (aGravFloat >= 3)
+            {
+                aGravFloat = 1;
+                aGravFloat2 = 1;
+            }
     }
-    public void WASDswap(bool WASDon)
-    {
-        WASD = WASDon;
-        WASDon = !WASDon;
-    }
+         void WASDswap(bool WASDon)
+        {
+            WASD = WASDon;
+            WASDon = !WASDon;
+        }
+    
 }
+
