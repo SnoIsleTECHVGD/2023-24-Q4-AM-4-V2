@@ -32,6 +32,7 @@ public class Movement : MonoBehaviour
     private float aGravFloat2 = 1f;
 
     float inputHorizontal;
+    
 
     private void Start()
     {
@@ -43,6 +44,8 @@ public class Movement : MonoBehaviour
     void Update()
     {
        rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
+
+        if(rb2D.velocity.x != 0f)
        spriteRenderer.flipX = rb2D.velocity.x < 0f;
         // Everything Between The Green Is God Mode
 
@@ -70,12 +73,7 @@ public class Movement : MonoBehaviour
                 rb2D.AddForce(Vector2.left * buildup);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
-            else
-            {
-                GetComponent<Animator>().SetInteger("State", 0);
-            }
-
-            if (Input.GetKey(right))
+            else if (Input.GetKey(right))
             {
                 rb2D.AddForce(Vector2.right * buildup);
                 GetComponent<Animator>().SetInteger("State", 1);
@@ -127,7 +125,7 @@ public class Movement : MonoBehaviour
                 jumpHeld = true;
             if (jumpHeld == true)
             {
-                Debug.Log("I want to scream");
+
                 GetComponent<Animator>().SetInteger("State", 3);
             }
             else
