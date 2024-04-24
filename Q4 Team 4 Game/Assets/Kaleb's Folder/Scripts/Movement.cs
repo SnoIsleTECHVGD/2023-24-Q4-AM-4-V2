@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
     private float boxCastFloat = 0.51f;
     private bool grounded()
     {
-        return Physics2D.BoxCast(transform.position - new Vector3(0f, boxCastFloat), new Vector2(jumpbool, jumpbool), 0, Vector2.zero, 1, groundLayer);
+        return Physics2D.BoxCast(transform.position - new Vector3(0f, boxCastFloat), new Vector2(jumpbool / 3, jumpbool), 0, Vector2.zero, 1, groundLayer);
     }
     private bool jumpHeld;
     private float timeSinceJump = -5;
