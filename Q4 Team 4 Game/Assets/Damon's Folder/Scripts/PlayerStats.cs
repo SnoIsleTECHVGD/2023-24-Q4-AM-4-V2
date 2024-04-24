@@ -84,7 +84,7 @@ public class PlayerStats : MonoBehaviour
         if (fruitTimer > 0)
         {
             fruitTimer -= Time.smoothDeltaTime;
-            timer.text =  fruitTimer.ToString();
+            timer.text = ((int)fruitTimer).ToString();
         }
 
       else
@@ -105,7 +105,7 @@ public class PlayerStats : MonoBehaviour
         {
           hasEatenJFruit = false;
         }
-        fruitTimer = 0f;
+        fruitTimer = 0;
         timer.text = "";
         fireAttack.SetActive(false);
         }
