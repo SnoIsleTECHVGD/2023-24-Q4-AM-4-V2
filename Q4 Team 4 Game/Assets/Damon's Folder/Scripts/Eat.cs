@@ -34,7 +34,7 @@ public class Eat : MonoBehaviour
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
 
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30f;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenJFruit = true;
                 dead = true;
              }
@@ -54,7 +54,7 @@ public class Eat : MonoBehaviour
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
 
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30f;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenFFruit = true;
                 dead = true;
              }
@@ -74,7 +74,7 @@ public class Eat : MonoBehaviour
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
 
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30f;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenGFruit = true;
                 dead = true;
             }
@@ -94,7 +94,7 @@ public class Eat : MonoBehaviour
                 }
 
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = true;
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30f; 
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30; 
                 dead = true;
             }
 
