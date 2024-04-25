@@ -5,13 +5,14 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public KeyCode left, right, jump;
-    public GameObject player, camera;
+    public GameObject player, cam;
     public float buildup = 1, jumpheight = 1, maxspeed = 1;
 
     private Rigidbody2D rb2D;
     private BoxCollider2D b2D;
     private SpriteRenderer spriteRenderer;
-    public bool WASD = false;
+    public bool WASD = true;
+    public bool WASDon = false;
     public LayerMask groundLayer;
     public float jumpbool;
     private float boxCastFloat = 0.51f;
@@ -33,7 +34,6 @@ public class Movement : MonoBehaviour
 
     float inputHorizontal;
     
-
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -43,10 +43,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
+        //rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
 
-        if(rb2D.velocity.x != 0f)
-        spriteRenderer.flipX = rb2D.velocity.x < 0f;
+        if (rb2D.velocity.x != 0f)
+        {
+            spriteRenderer.flipX = rb2D.velocity.x < 0f;
+        }
         // Everything Between The Green Is God Mode
 
         inputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -70,55 +72,50 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKey(left))
             {
-                rb2D.AddForce(Vector2.left * buildup);
+                Debug.Log("Piglets");
+                rb2D.AddForce(Vector2.left * buildup * Time.deltaTime);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
             else if (Input.GetKey(right))
             {
-                rb2D.AddForce(Vector2.right * buildup);
+                rb2D.AddForce(Vector2.right * buildup * Time.deltaTime);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
             else
             {
                 GetComponent<Animator>().SetInteger("State", 0);
             }
-
-            if (WASD == true)
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.A))
             {
-                if (Input.GetKey(KeyCode.A))
-                {
-                    rb2D.AddForce(Vector2.left * buildup);
-                    GetComponent<Animator>().SetInteger("State", 2);
-                   
-                }
-                else
-                {
-                    GetComponent<Animator>().SetInteger("State", 0);
-                }
+                Debug.Log("Babies");
+                rb2D.AddForce(Vector2.left * buildup * Time.deltaTime);
+                GetComponent<Animator>().SetInteger("State", 2);
 
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rb2D.AddForce(Vector2.right * buildup);
-                    GetComponent<Animator>().SetInteger("State", 1);
-                   
-                }
-                else
-                {
-                    GetComponent<Animator>().SetInteger("State", 0);
-                }
             }
-
-            if (grounded() && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded()))
+            else if (Input.GetKey(KeyCode.D))
             {
-               
-                xVelocity = rb2D.velocity.x;
-                rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
-                cooldown = 0f;
-               
+                rb2D.AddForce(Vector2.right * buildup * Time.deltaTime);
+                GetComponent<Animator>().SetInteger("State", 1);
+
             }
-              
+            else
+            {
+                GetComponent<Animator>().SetInteger("State", 0);
+            }
         }
 
+        if (grounded() && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded()))
+        {
+
+            xVelocity = rb2D.velocity.x;
+            rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
+            cooldown = 0f;
+
+        }
+              
         // Control jump height with length of jump held
         if (Input.GetKey(jump))
         {
@@ -152,11 +149,11 @@ public class Movement : MonoBehaviour
 
         if ((player.GetComponent<PlayerStats>().hasEatenAGFruit == true && qhf == true) || aGravFloat % 2 == 0)
         {
-            camAndPlayDist = camera.transform.position.x - player.transform.position.x;
-            camera.transform.Rotate(0f, 0f, 180f);
+            camAndPlayDist = cam.transform.position.x - player.transform.position.x;
+            cam.transform.Rotate(0f, 0f, 180f);
             player.transform.Rotate(0f, 0f, 180f);
-            camPos = camera.transform.position.x + (2 * camAndPlayDist);
-            camera.transform.position += new Vector3(2 * camAndPlayDist, 0, 0);
+            camPos = cam.transform.position.x + (2 * camAndPlayDist);
+            cam.transform.position += new Vector3(2 * camAndPlayDist, 0, 0);
             boxCastFloat = -boxCastFloat;
             antiGravity = !antiGravity;
             jumpheight = -jumpheight;
@@ -175,10 +172,10 @@ public class Movement : MonoBehaviour
             aGravFloat2 = 1;
         }
     }
-    void WASDswap(bool WASDon)
+    void WASDswap()
     {
-        WASD = WASDon;
+        WASDon = WASD;
         WASDon = !WASDon;
+        WASD = WASDon;
     }
 }
-
