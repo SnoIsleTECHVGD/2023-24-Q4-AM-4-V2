@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cea69b789e96d774e81113c19b76e14e
+guid: 28914cefd7206ea40b67f0e0e5345a44
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,253 +131,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire Attack Animation_0
+      name: HP Bar_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 189
-        height: 268
-      alignment: 9
-      pivot: {x: 0.19815578, y: 0.48350275}
+        width: 1040
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b1776e75ab73ff4685bc817fb36f4ac
-      internalID: -1777689053
+      spriteID: 7f7fa40c0a60d5044bd46e4c856aed06
+      internalID: -1049649657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_1
+      name: HP Bar_1
       rect:
         serializedVersion: 2
-        x: 233
+        x: 1101
         y: 0
-        width: 223
-        height: 268
-      alignment: 9
-      pivot: {x: 0.14252284, y: 0.4670055}
+        width: 1038
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7a0e5f628105dd4e8f9c60f273b7205
-      internalID: -2092181782
+      spriteID: 95552d30ecbc48f4393bd57e24fccb9d
+      internalID: -493404946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_2
+      name: HP Bar_2
       rect:
         serializedVersion: 2
-        x: 542
+        x: 2193
         y: 0
-        width: 257
-        height: 268
-      alignment: 9
-      pivot: {x: 0.15895455, y: 0.43951002}
+        width: 1034
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8d15cb6726a3d8488b58f350c520e43
-      internalID: -421978219
+      spriteID: 87bbf772f5d35d8448910f528939c359
+      internalID: 554296843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_3
+      name: HP Bar_3
       rect:
         serializedVersion: 2
-        x: 869
+        x: 3279
         y: 0
-        width: 318
-        height: 268
-      alignment: 9
-      pivot: {x: 0.13805461, y: 0.40651548}
+        width: 1032
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7832c7acc77166542bd16cdb4ae28228
-      internalID: 1935089425
+      spriteID: 3768694463fbc4b4db8a93306377271d
+      internalID: -1681041242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_4
+      name: HP Bar_4
       rect:
         serializedVersion: 2
-        x: 1230
+        x: 4371
         y: 0
-        width: 325
-        height: 268
-      alignment: 9
-      pivot: {x: 0.1089502, y: 0.42301276}
+        width: 1032
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a832f57ac027a4e49852731b655f8cb1
-      internalID: -1216040987
+      spriteID: 44a63599debdaa44da1fa55b551b2d4c
+      internalID: -1891503459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_5
+      name: HP Bar_5
       rect:
         serializedVersion: 2
-        x: 1612
+        x: 5457
         y: 0
-        width: 406
-        height: 268
-      alignment: 9
-      pivot: {x: 0.07540969, y: 0.4175137}
+        width: 1037
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5c10d507e30ec44e9f4ab75ec432971
-      internalID: 729495094
+      spriteID: 6e749897f7485064bafd3661250147c5
+      internalID: -1473522068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_6
+      name: HP Bar_6
       rect:
         serializedVersion: 2
-        x: 2075
+        x: 6585
         y: 0
-        width: 480
-        height: 268
-      alignment: 9
-      pivot: {x: 0.071492516, y: 0.46150637}
+        width: 1035
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926b280368ca38e438d42c673eb51631
-      internalID: 1195531911
+      spriteID: ea3ab03a45aeb7a49955b343c9ccffc7
+      internalID: -565200325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_7
+      name: HP Bar_7
       rect:
         serializedVersion: 2
-        x: 2618
+        x: 7711
         y: 0
-        width: 521
-        height: 268
-      alignment: 9
-      pivot: {x: 0.05848644, y: 0.42851186}
+        width: 1026
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb26673858533204cad359feafe8733b
-      internalID: 1016434837
+      spriteID: f39c4bd4ddecc6248955b89ba48a9259
+      internalID: -200636164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_8
+      name: HP Bar_8
       rect:
         serializedVersion: 2
-        x: 3197
+        x: 8841
         y: 0
-        width: 521
-        height: 268
-      alignment: 9
-      pivot: {x: 0.055657502, y: 0.48900184}
+        width: 1033
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0c532b8d4ee6804bbb181126ec63ef6
-      internalID: 1464452619
+      spriteID: ab3ec76f3f9a0a64893dc87c2932c87f
+      internalID: 1513591683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_9
+      name: HP Bar_9
       rect:
         serializedVersion: 2
-        x: 3846
+        x: 9980
         y: 0
-        width: 626
-        height: 268
-      alignment: 9
-      pivot: {x: 0.05, y: 0.5}
+        width: 1045
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0f7567fa7a8a1242852a1a3b2258b88
-      internalID: 431492119
+      spriteID: d5d068a510e8ca847aa4333122562e11
+      internalID: -1519954223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_10
+      name: HP Bar_10
       rect:
         serializedVersion: 2
-        x: 4557
+        x: 11119
         y: 0
-        width: 733
-        height: 268
-      alignment: 9
-      pivot: {x: 0.05, y: 0.5}
+        width: 1027
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e869763d49efd49b8042bad041aa68
-      internalID: 1557956916
+      spriteID: b7ee2b323e508f94da929c1925faf132
+      internalID: 2065446111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Attack Animation_11
+      name: HP Bar_11
       rect:
         serializedVersion: 2
-        x: 5435
+        x: 12191
         y: 0
-        width: 764
-        height: 268
-      alignment: 9
-      pivot: {x: 0.05, y: 0.5}
+        width: 1032
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 336421769312ed144892d196e5252c84
-      internalID: -655923724
+      spriteID: aa31fa69c076ff647b1455433433f7e2
+      internalID: -1281114578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HP Bar_12
+      rect:
+        serializedVersion: 2
+        x: 13297
+        y: 0
+        width: 1044
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b91f4f76f32f94db8147587a54467f
+      internalID: 992460501
       vertices: []
       indices: 
       edges: []
@@ -385,7 +406,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ae7d210909470c747b1765a09350e1f7
+    spriteID: 4e9943a477ea58d448923d831c85a224
     internalID: 0
     vertices: []
     indices: 
@@ -393,18 +414,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fire Attack Animation_7: 1016434837
-      Fire Attack Animation_11: -655923724
-      Fire Attack Animation_1: -2092181782
-      Fire Attack Animation_0: -1777689053
-      Fire Attack Animation_10: 1557956916
-      Fire Attack Animation_5: 729495094
-      Fire Attack Animation_3: 1935089425
-      Fire Attack Animation_6: 1195531911
-      Fire Attack Animation_4: -1216040987
-      Fire Attack Animation_8: 1464452619
-      Fire Attack Animation_9: 431492119
-      Fire Attack Animation_2: -421978219
+      HP Bar_3: -1681041242
+      HP Bar_4: -1891503459
+      HP Bar_8: 1513591683
+      HP Bar_5: -1473522068
+      HP Bar_12: 992460501
+      HP Bar_1: -493404946
+      HP Bar_11: -1281114578
+      HP Bar_10: 2065446111
+      HP Bar_6: -565200325
+      HP Bar_9: -1519954223
+      HP Bar_0: -1049649657
+      HP Bar_7: -200636164
+      HP Bar_2: 554296843
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

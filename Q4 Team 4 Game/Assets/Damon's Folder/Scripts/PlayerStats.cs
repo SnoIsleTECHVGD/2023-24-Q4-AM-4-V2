@@ -108,6 +108,9 @@ public class PlayerStats : MonoBehaviour
         fruitTimer = 0;
         timer.text = "";
         fireAttack.SetActive(false);
-        }
+      }
+
+        
+       
     }
 }

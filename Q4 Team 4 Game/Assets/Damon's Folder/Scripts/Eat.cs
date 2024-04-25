@@ -20,6 +20,7 @@ public class Eat : MonoBehaviour
 
              if (fruitName == "Jump Fruit")
              {
+                
 
                 if (collision.gameObject.GetComponent<PlayerStats>().hasEatenFFruit == true)
                 {
@@ -33,10 +34,11 @@ public class Eat : MonoBehaviour
                 {
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
-
+                
                 collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenJFruit = true;
                 dead = true;
+                
              }
              else if (fruitName == "Fire Fruit")
              {
@@ -101,7 +103,7 @@ public class Eat : MonoBehaviour
             alive = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             transform.position = death;
         }
-
+      
     }
     void Update()
     {
