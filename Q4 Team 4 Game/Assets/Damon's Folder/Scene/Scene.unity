@@ -278,7 +278,7 @@ MonoBehaviour:
   buildup: 10
   jumpheight: 19
   maxspeed: 50
-  WASD: 1
+  WASD: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1723,6 +1723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3043566}
+  fire: {fileID: 40429402}
   maxHealth: 100
   health: 100
   baseDamage: 5
@@ -1791,6 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  player: {fileID: 3043566}
 --- !u!1 &1968200814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2900566721147154638, guid: 95776eea7634bf3469b5a965d830baf3, type: 3}

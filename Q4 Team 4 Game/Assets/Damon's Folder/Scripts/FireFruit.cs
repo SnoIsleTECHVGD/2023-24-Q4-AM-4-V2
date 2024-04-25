@@ -10,13 +10,20 @@ public class FireFruit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (player.GetComponent<SpriteRenderer>().flipX && transform.position.x > 0)
+        {
+            transform.position = new Vector3(-3, 0.715f, 0);
+        }
+        else if (player.GetComponent<SpriteRenderer>().flipX)
+        {
+            transform.position = new Vector3(3, 0.715f, 0);
+        }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
