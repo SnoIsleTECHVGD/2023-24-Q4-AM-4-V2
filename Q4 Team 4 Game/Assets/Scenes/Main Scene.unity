@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110947796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 145e373a6977a344d97b049c9661764d, type: 3}
   m_Name: 
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110947796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5cd7067a6ce1644d93a46404937344d, type: 3}
   m_Name: 
@@ -8040,6 +8040,7 @@ GameObject:
   - component: {fileID: 471803800}
   - component: {fileID: 471803801}
   - component: {fileID: 471803802}
+  - component: {fileID: 471803803}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8074,7 +8075,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471803793}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbb30c8f7600a6e45a546053f4fd2a42, type: 3}
   m_Name: 
@@ -8083,11 +8084,12 @@ MonoBehaviour:
   right: 100
   jump: 32
   player: {fileID: 471803793}
-  camera: {fileID: 0}
+  cam: {fileID: 0}
   buildup: 40
   jumpheight: 20
   maxspeed: 40
   WASD: 0
+  WASDon: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -8274,6 +8276,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 471803793}
   healthBar: {fileID: 1941453789}
+--- !u!114 &471803803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471803793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b17347490cbf943b0338dc44f490bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 97
+  right: 100
+  jump: 32
+  player: {fileID: 471803793}
+  camera: {fileID: 0}
+  buildup: 20
+  jumpheight: 40
+  maxspeed: 20
+  WASD: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  jumpbool: 3
 --- !u!1 &477066005
 GameObject:
   m_ObjectHideFlags: 0
