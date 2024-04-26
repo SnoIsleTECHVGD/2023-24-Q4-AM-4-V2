@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
     private bool qhf = true;
     private float aGravFloat = 1f;
     private float aGravFloat2 = 1f;
+    public float deltaTime, timebool;
 
     float inputHorizontal;
     
@@ -43,42 +44,30 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        //rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
-
-        if (rb2D.velocity.x != 0f)
-        {
-            spriteRenderer.flipX = rb2D.velocity.x < 0f;
-        }
-        // Everything Between The Green Is God Mode
-
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            antiGravity = !antiGravity;
-        }
+        deltaTime = Time.deltaTime * timebool;
         if (antiGravity)
         {
             rb2D.gravityScale = -rb2D.gravityScale;
             antiGravity = !antiGravity;
             fhq = !fhq;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        //rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
+
+        if (rb2D.velocity.x != 0f)
         {
-            b2D.enabled = !b2D.enabled;
+            spriteRenderer.flipX = rb2D.velocity.x < 0f;
         }
-        // Everything Between The Green Is God Mode
+
         if (WASD == false)
         {
             if (Input.GetKey(left))
             {
-                Debug.Log("Piglets");
-                rb2D.AddForce(Vector2.left * buildup * Time.deltaTime);
+                rb2D.AddForce(Vector2.left * buildup * deltaTime);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
             else if (Input.GetKey(right))
             {
-                rb2D.AddForce(Vector2.right * buildup * Time.deltaTime);
+                rb2D.AddForce(Vector2.right * buildup * deltaTime);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
             else
@@ -91,13 +80,13 @@ public class Movement : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
                 Debug.Log("Babies");
-                rb2D.AddForce(Vector2.left * buildup * Time.deltaTime);
+                rb2D.AddForce(Vector2.left * buildup * deltaTime);
                 GetComponent<Animator>().SetInteger("State", 2);
 
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                rb2D.AddForce(Vector2.right * buildup * Time.deltaTime);
+                rb2D.AddForce(Vector2.right * buildup * deltaTime);
                 GetComponent<Animator>().SetInteger("State", 1);
 
             }
@@ -149,6 +138,7 @@ public class Movement : MonoBehaviour
 
         if ((player.GetComponent<PlayerStats>().hasEatenAGFruit == true && qhf == true) || aGravFloat % 2 == 0)
         {
+            Debug.Log("jh");
             camAndPlayDist = cam.transform.position.x - player.transform.position.x;
             cam.transform.Rotate(0f, 0f, 180f);
             player.transform.Rotate(0f, 0f, 180f);
