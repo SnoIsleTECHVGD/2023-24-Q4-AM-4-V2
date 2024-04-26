@@ -47,6 +47,15 @@ public class MovementBackup : MonoBehaviour
 
         if (rb2D.velocity.x != 0f)
             spriteRenderer.flipX = rb2D.velocity.x < 0f;
+
+        if (GetComponent<PlayerStats>().hasEatenJFruit == true)
+        {
+            GetComponent<Animator>().SetBool("HasEatenFruit", true);
+        }
+        if (GetComponent<PlayerStats>().hasEatenJFruit == true)
+        {
+
+        }
         // Everything Between The Green Is God Mode
 
         inputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -77,6 +86,11 @@ public class MovementBackup : MonoBehaviour
             {
                 rb2D.AddForce(Vector2.right * buildup);
                 GetComponent<Animator>().SetInteger("State", 1);
+            }
+            else if (GetComponent<PlayerStats>().hasEatenJFruit == true)
+            {
+                GetComponent<Animator>().SetInteger("State", 5);
+                Debug.Log("Eats");
             }
             else
             {

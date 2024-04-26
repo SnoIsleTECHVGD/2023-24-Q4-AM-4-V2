@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110947796}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 145e373a6977a344d97b049c9661764d, type: 3}
   m_Name: 
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110947796}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5cd7067a6ce1644d93a46404937344d, type: 3}
   m_Name: 
@@ -8035,12 +8035,12 @@ GameObject:
   - component: {fileID: 471803798}
   - component: {fileID: 471803797}
   - component: {fileID: 471803796}
-  - component: {fileID: 471803795}
+  - component: {fileID: 471803803}
   - component: {fileID: 471803794}
   - component: {fileID: 471803800}
   - component: {fileID: 471803801}
   - component: {fileID: 471803802}
-  - component: {fileID: 471803803}
+  - component: {fileID: 471803795}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8294,7 +8294,7 @@ MonoBehaviour:
   player: {fileID: 471803793}
   camera: {fileID: 0}
   buildup: 20
-  jumpheight: 40
+  jumpheight: 30
   maxspeed: 20
   WASD: 0
   groundLayer:
@@ -8452,7 +8452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477066005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
@@ -39237,7 +39237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457570170}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
@@ -39760,7 +39760,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500359934}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
@@ -95173,7 +95173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703284464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3efd072412e8d4b9634ee44dbc5073, type: 3}
   m_Name: 
