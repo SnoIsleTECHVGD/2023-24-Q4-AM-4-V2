@@ -18,11 +18,11 @@ public class FireFruit : MonoBehaviour
     {
         if (player.GetComponent<SpriteRenderer>().flipX && transform.position.x > 0)
         {
-            transform.position = new Vector3(-3, 0.715f, 0);
+            transform.position = new Vector3(-3 + player.transform.position.x, 0.715f + player.transform.position.x, 0);
         }
         else if (player.GetComponent<SpriteRenderer>().flipX)
         {
-            transform.position = new Vector3(3, 0.715f, 0);
+            transform.position = new Vector3(3 + player.transform.position.x, 0.715f + player.transform.position.x, 0);
         }
     }
     public void OnTriggerStay2D(Collider2D collision)

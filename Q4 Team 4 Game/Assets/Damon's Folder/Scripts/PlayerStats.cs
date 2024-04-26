@@ -38,7 +38,7 @@ public class PlayerStats : MonoBehaviour
             if (collision.gameObject.GetComponent<EnemyStats>().damageDealing >= 1)
             {
                 health -= collision.gameObject.GetComponent<EnemyStats>().damageDealing;
-               
+                GetComponent<PlayerStats>().healthBar.fillAmount = (GetComponent<PlayerStats>().health * 1.0f) / GetComponent<PlayerStats>().maxHealth;
                 gameObject.GetComponent<Renderer>().material.color = Color.red;
 
                 // Death

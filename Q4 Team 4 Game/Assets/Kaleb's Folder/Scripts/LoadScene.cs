@@ -67,6 +67,14 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadScene(nam);
     }
 
+    public void Settings()
+    {
+        scene = SceneManager.GetActiveScene();
+        Time.timeScale = 1f;
+        nam = scene.name;
+        SceneManager.LoadScene("Settings");
+    }
+
     public void Play()
     {
         Time.timeScale = 1f;
