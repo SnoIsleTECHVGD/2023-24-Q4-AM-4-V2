@@ -44,7 +44,7 @@ public class MovementBackup : MonoBehaviour
 
     private void Eating()
     {
-        player.GetComponent<Animator>().SetInteger("State", 5);
+        player.GetComponent<Animator>().SetBool("HasEatenFruit", true);
     }
 
     void Update()
@@ -85,20 +85,22 @@ public class MovementBackup : MonoBehaviour
         {
             if (Input.GetKey(left))
             {
-                rb2D.AddForce(Vector2.left * buildup);
+                rb2D.AddForce(Vector2.left * buildup * Time.deltaTime * 1000);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
             else if (Input.GetKey(right))
             {
-                rb2D.AddForce(Vector2.right * buildup);
+                rb2D.AddForce(Vector2.right * buildup * Time.deltaTime * 1000);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
             else if (GetComponent<PlayerStats>().hasEatenJFruit == true)
             {
-                GetComponent<Animator>().SetInteger("State", 5);
+                
                 Debug.Log("Eats");
                 Invoke("Eating", 5);
+                Debug.Log("Eating is working");
             }
+           
             else
             {
                 GetComponent<Animator>().SetInteger("State", 0);
@@ -108,7 +110,7 @@ public class MovementBackup : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.A))
                 {
-                    rb2D.AddForce(Vector2.left * buildup);
+                    rb2D.AddForce(Vector2.left * buildup * Time.deltaTime * 100);
                     GetComponent<Animator>().SetInteger("State", 2);
 
                 }

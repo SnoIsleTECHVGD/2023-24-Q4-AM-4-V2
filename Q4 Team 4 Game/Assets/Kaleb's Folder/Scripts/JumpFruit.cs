@@ -15,7 +15,7 @@ public class JumpFruit : MonoBehaviour
     void Start()
     {
         GameObject.FindWithTag("Player");
-        m = player.GetComponent<Movement>().jumpheight;
+        m = player.GetComponent<MovementBackup>().jumpheight;
         jumpInc = 2 * m;
         jumpNormal = m;
         stats = player.GetComponent<PlayerStats>();
@@ -26,7 +26,7 @@ public class JumpFruit : MonoBehaviour
         if (stats.hasEatenJFruit == false && stats.hasEatenAGFruit == false)
         {
             m = jumpNormal;
-            player.GetComponent<Movement>().jumpheight = m;
+            player.GetComponent<MovementBackup>().jumpheight = m;
         }
     }
     void OnCollisionEnter2D()
@@ -36,7 +36,8 @@ public class JumpFruit : MonoBehaviour
         {
             player.GetComponent<PlayerStats>().fruitTimer = 30;
             m = jumpInc;
-            player.GetComponent<Movement>().jumpheight = m;
+            Debug.Log(m);
+            player.GetComponent<MovementBackup>().jumpheight = m;
             on = false;
         }
     }

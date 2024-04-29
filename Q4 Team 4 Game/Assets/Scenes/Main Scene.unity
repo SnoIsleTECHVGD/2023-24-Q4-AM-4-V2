@@ -8296,8 +8296,8 @@ MonoBehaviour:
   player: {fileID: 471803793}
   camera: {fileID: 0}
   buildup: 20
-  jumpheight: 30
-  maxspeed: 30
+  jumpheight: 20
+  maxspeed: 300
   WASD: 0
   groundLayer:
     serializedVersion: 2
@@ -12930,7 +12930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145e373a6977a344d97b049c9661764d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 471803799}
+  player: {fileID: 471803793}
   fire: {fileID: 0}
   maxHealth: 10
   health: 10
@@ -95751,6 +95751,7 @@ GameObject:
   - component: {fileID: 1729599780}
   - component: {fileID: 1729599781}
   - component: {fileID: 1729599782}
+  - component: {fileID: 1729599783}
   m_Layer: 0
   m_Name: Door G
   m_TagString: Untagged
@@ -95872,6 +95873,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1729599783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729599778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b25bf50cb065b24dbda6dfca1077dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 471803793}
 --- !u!1 &1732822094
 GameObject:
   m_ObjectHideFlags: 0
