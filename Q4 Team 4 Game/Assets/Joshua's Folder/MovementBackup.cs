@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class MovementBackup : MonoBehaviour
@@ -41,13 +42,18 @@ public class MovementBackup : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Eating()
+    {
+        player.GetComponent<Animator>().SetInteger("State", 5);
+    }
+
     void Update()
     {
         rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
 
         if (rb2D.velocity.x != 0f)
             spriteRenderer.flipX = rb2D.velocity.x < 0f;
-
+       
         if (GetComponent<PlayerStats>().hasEatenJFruit == true)
         {
             GetComponent<Animator>().SetBool("HasEatenFruit", true);
@@ -91,6 +97,7 @@ public class MovementBackup : MonoBehaviour
             {
                 GetComponent<Animator>().SetInteger("State", 5);
                 Debug.Log("Eats");
+                Invoke("Eating", 5);
             }
             else
             {

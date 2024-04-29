@@ -8094,6 +8094,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpbool: 3
+  deltaTime: 0
+  timebool: 0
 --- !u!61 &471803796
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8295,7 +8297,7 @@ MonoBehaviour:
   camera: {fileID: 0}
   buildup: 20
   jumpheight: 30
-  maxspeed: 20
+  maxspeed: 30
   WASD: 0
   groundLayer:
     serializedVersion: 2
