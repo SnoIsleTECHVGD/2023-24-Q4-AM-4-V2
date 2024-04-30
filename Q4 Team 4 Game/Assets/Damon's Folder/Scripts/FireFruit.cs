@@ -16,6 +16,7 @@ public class FireFruit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //changes fire direction based on if the player if facing that direction
         if (player.GetComponent<SpriteRenderer>().flipX && transform.position.x > 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
@@ -27,6 +28,7 @@ public class FireFruit : MonoBehaviour
             transform.position = new Vector3(1 + player.transform.position.x, 0.715f + player.transform.position.y, 0);
         }
     }
+    //Damages enemy if they're in it
     public void OnTriggerStay2D(Collider2D collision)
     {
         if ((collision.gameObject.GetComponent("EnemyStats") as EnemyStats) != null)
