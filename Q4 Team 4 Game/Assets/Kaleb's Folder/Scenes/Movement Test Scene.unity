@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Fruit
       objectReference: {fileID: 0}
+    - target: {fileID: 4211888338522661700, guid: aeefdf53f06aa2b4d884d38afea8161e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6418752136481805269, guid: aeefdf53f06aa2b4d884d38afea8161e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -586,9 +590,17 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2900566721147154638, guid: f86ba375e78856842a3853918c0ebedf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4211888338522661700, guid: f86ba375e78856842a3853918c0ebedf, type: 3}
       propertyPath: m_Name
       value: Anti-Gravity Fruit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211888338522661700, guid: f86ba375e78856842a3853918c0ebedf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6192149303786851779, guid: f86ba375e78856842a3853918c0ebedf, type: 3}
       propertyPath: fruitName

@@ -7,12 +7,15 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pausemenu;
     public GameObject settingsmenu;
+    public GameObject tutorialmenu;
     public bool isPaused = false;
     public bool isSettings = false;
+    public bool isTutorial = false;
     void Start()
     {
         pausemenu.SetActive(false);
         settingsmenu.SetActive(false);
+        tutorialmenu.SetActive(false);
     }
 
     void Update()
@@ -57,7 +60,22 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = true;
         isSettings = false;
+        isTutorial = false;
         pausemenu.SetActive(true);
         settingsmenu.SetActive(false);
+        tutorialmenu.SetActive(false);
+    }
+
+    public void Tutorial()
+    {
+        isPaused = false;
+        isTutorial = true;
+        Time.timeScale = 0f;
+        pausemenu.SetActive(false);
+        tutorialmenu.SetActive(true);
+    }
+    public void phozDelete()
+    {
+
     }
 }
