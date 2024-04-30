@@ -14,7 +14,8 @@ public class PlayerStats : MonoBehaviour
     public int health;
     public int baseDamage;
     public int damage;
-    public bool eatingAnimationTimer;
+    public bool eatingAnimationTimer = false;
+
     public bool hasEatenJFruit;
     public bool hasEatenGFruit;
 
