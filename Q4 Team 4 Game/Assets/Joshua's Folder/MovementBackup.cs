@@ -32,6 +32,7 @@ public class MovementBackup : MonoBehaviour
     private float aGravFloat = 1f;
     private float aGravFloat2 = 1f;
 
+    public bool eatingAnimationTimer;
     float inputHorizontal;
 
 
@@ -41,7 +42,12 @@ public class MovementBackup : MonoBehaviour
         b2D = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
+    // once it is true have delay then turn it false
+    //player.GetComponent<PlayerStats>().eatingAnimationTimer = false;
+    private void eatAnimationActive()
+    {
+        //GetComponent<PlayerStats>().eatingAnimationTimer = true;
+    }
     private void Eating()
     {
         player.GetComponent<Animator>().SetBool("HasEatenFruit", true);
@@ -54,14 +60,6 @@ public class MovementBackup : MonoBehaviour
         if (rb2D.velocity.x != 0f)
             spriteRenderer.flipX = rb2D.velocity.x < 0f;
        
-        if (GetComponent<PlayerStats>().hasEatenJFruit == true)
-        {
-            GetComponent<Animator>().SetBool("HasEatenFruit", true);
-        }
-        if (GetComponent<PlayerStats>().hasEatenJFruit == true)
-        {
-
-        }
         // Everything Between The Green Is God Mode
 
         inputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -93,14 +91,13 @@ public class MovementBackup : MonoBehaviour
                 rb2D.AddForce(Vector2.right * buildup * Time.deltaTime * 1000);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
-            else if (GetComponent<PlayerStats>().hasEatenJFruit == true)
+            else if (GetComponent<PlayerStats>().hasEatenJFruit == true || player.GetComponent<PlayerStats>().hasEatenAGFruit == true || player.GetComponent<PlayerStats>().hasEatenFFruit == true)
             {
                 
                 Debug.Log("Eats");
                 Invoke("Eating", 5);
                 Debug.Log("Eating is working");
             }
-           
             else
             {
                 GetComponent<Animator>().SetInteger("State", 0);

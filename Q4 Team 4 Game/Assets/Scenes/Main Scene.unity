@@ -8230,6 +8230,7 @@ MonoBehaviour:
   health: 10
   baseDamage: 0
   damage: 10
+  eatingAnimationTimer: 0
   hasEatenJFruit: 0
   hasEatenGFruit: 0
   hasEatenFFruit: 0
@@ -8303,6 +8304,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpbool: 3
+  eatingAnimationTimer: 0
 --- !u!1 &477066005
 GameObject:
   m_ObjectHideFlags: 0
@@ -95885,7 +95887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b25bf50cb065b24dbda6dfca1077dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 471803793}
 --- !u!1 &1732822094
 GameObject:
   m_ObjectHideFlags: 0
