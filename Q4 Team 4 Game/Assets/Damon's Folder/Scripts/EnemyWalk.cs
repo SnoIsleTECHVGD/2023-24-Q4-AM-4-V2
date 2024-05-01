@@ -44,7 +44,7 @@ public class EnemyWalk : MonoBehaviour
        
         inputHorizontal = Input.GetAxisRaw("Horizontal"); 
 
-        if (inputHorizontal > 0)
+        if (IsFacingRight())
         {
             GetComponent<Animator>().SetInteger("State", 1);
             gameObject.transform.localScale = new Vector3(0.6092f, 0.4288f);
@@ -54,7 +54,7 @@ public class EnemyWalk : MonoBehaviour
             GetComponent<Animator>().SetInteger("State", 0);
         }
 
-        if (inputHorizontal < 0)
+        if (!IsFacingRight())
         {
             GetComponent<Animator>().SetInteger("State", 2);
             gameObject.transform.localScale = new Vector3(-0.6092f, 0.4288f);
