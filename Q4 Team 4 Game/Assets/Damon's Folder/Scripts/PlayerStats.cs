@@ -111,10 +111,5 @@ public class PlayerStats : MonoBehaviour
         fireAttack.SetActive(false);
       }
 
-        if (GetComponent<PlayerStats>().hasEatenJFruit == true)
-        {
-            GetComponent<Animator>().SetInteger("State", 5);
-        }
-
     }
 }

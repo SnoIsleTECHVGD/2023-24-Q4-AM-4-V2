@@ -8299,12 +8299,12 @@ MonoBehaviour:
   buildup: 20
   jumpheight: 20
   maxspeed: 300
+  aniWaitTime: 5
   WASD: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   jumpbool: 3
-  eatingAnimationTimer: 0
 --- !u!1 &477066005
 GameObject:
   m_ObjectHideFlags: 0
