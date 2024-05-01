@@ -129,7 +129,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Anti Gravity Fruit_0
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 598
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7146f4dd895d44e8ee6081232c53a0
+      internalID: -975364010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anti Gravity Fruit_1
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 499
+        width: 597
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b537cb682228cb246a5649d688292157
+      internalID: 37168187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -140,7 +182,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Anti Gravity Fruit_1: 37168187
+      Anti Gravity Fruit_0: -975364010
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
