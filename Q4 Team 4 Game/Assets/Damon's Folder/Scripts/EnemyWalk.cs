@@ -12,6 +12,7 @@ public class EnemyWalk : MonoBehaviour
 
     public GameObject player;
     private float distance;
+    private Vector2 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,26 +39,25 @@ public class EnemyWalk : MonoBehaviour
         }
     */
         distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
+         direction = player.transform.position - transform.position;
 
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
        
-        inputHorizontal = Input.GetAxisRaw("Horizontal"); 
-
-        if (IsFacingRight())
-        {
-            GetComponent<Animator>().SetInteger("State", 1);
-            gameObject.transform.localScale = new Vector3(0.6092f, 0.4288f);
-        }
-        else
-        {
-            GetComponent<Animator>().SetInteger("State", 0);
-        }
+        
 
         if (!IsFacingRight())
         {
-            GetComponent<Animator>().SetInteger("State", 2);
-            gameObject.transform.localScale = new Vector3(-0.6092f, 0.4288f);
+            GetComponent<Animator>().SetInteger("State", 1);
+            GetComponent<SpriteRenderer>().flipX = true;
+            //gameObject.transform.localScale = new Vector3(0.6092f, 0.4288f);
+        }
+        
+
+        else if (IsFacingRight())
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<Animator>().SetInteger("State", 1);
+            //gameObject.transform.localScale = new Vector3(-0.6092f, 0.4288f);
         }
         else
         {
@@ -67,10 +67,16 @@ public class EnemyWalk : MonoBehaviour
     }
     private bool IsFacingRight()
     {
-        return transform.localScale.x > Mathf.Epsilon;
+        return direction.x > Mathf.Epsilon;
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    /*
+    private void OnCollisionExit2D(Collision2D collision)
     {
         transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), transform.localScale.y);
     }
+    private void OnCollisionE2D(Collision2D collision)
+    {
+        transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), transform.localScale.y);
+    }
+    */
 }
