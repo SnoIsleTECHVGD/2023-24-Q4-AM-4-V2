@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -8,7 +9,7 @@ public class MovementBackup : MonoBehaviour
     public KeyCode left, right, jump;
     public GameObject player, camera;
     public float buildup = 1, jumpheight = 1, maxspeed = 1;
-
+    public int aniWaitTime;
     private Rigidbody2D rb2D;
     private BoxCollider2D b2D;
     private SpriteRenderer spriteRenderer;
@@ -26,13 +27,13 @@ public class MovementBackup : MonoBehaviour
     private float xVelocity;
     private float camAndPlayDist;
     private float camPos;
-    private bool antiGravity = false;
+    private bool antiGravity = false, waitAnimation;
     private bool fhq = false;
     private bool qhf = true;
     private float aGravFloat = 1f;
     private float aGravFloat2 = 1f;
 
-    public bool eatingAnimationTimer;
+    
     float inputHorizontal;
 
 
@@ -42,11 +43,15 @@ public class MovementBackup : MonoBehaviour
         b2D = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    // once it is true have delay then turn it false
-    //player.GetComponent<PlayerStats>().eatingAnimationTimer = false;
-    private void eatAnimationActive()
+     //once it is true have delay then turn it false
+     private void activateEatAnimation()
+     { 
+        GetComponent<PlayerStats>().eatingAnimationTimer = false;
+     }
+    
+    private void deactivateEatAnimation()
     {
-        //GetComponent<PlayerStats>().eatingAnimationTimer = true;
+        GetComponent<PlayerStats>().eatingAnimationTimer = true;
     }
     private void Eating()
     {
@@ -91,16 +96,24 @@ public class MovementBackup : MonoBehaviour
                 rb2D.AddForce(Vector2.right * buildup * Time.deltaTime * 1000);
                 GetComponent<Animator>().SetInteger("State", 1);
             }
-            else if (GetComponent<PlayerStats>().hasEatenJFruit == true || player.GetComponent<PlayerStats>().hasEatenAGFruit == true || player.GetComponent<PlayerStats>().hasEatenFFruit == true)
-            {
-                
-                Debug.Log("Eats");
-                Invoke("Eating", 5);
-                Debug.Log("Eating is working");
-            }
             else
             {
                 GetComponent<Animator>().SetInteger("State", 0);
+            }
+
+            if (GetComponent<PlayerStats>().hasEatenJFruit == true || player.GetComponent<PlayerStats>().hasEatenAGFruit == true || player.GetComponent<PlayerStats>().hasEatenFFruit == true)
+            {
+                //GetComponent<PlayerStats>().eatingAnimationTimer
+                
+                if (this.gameObject.GetComponent<PlayerStats>().eatingAnimationTimer == false && waitAnimation == false)
+                {
+                    waitAnimation = true; 
+                    Debug.Log("Eats");
+                    Invoke("Eating", 0);
+                    Debug.Log("Eating is working");
+                    StartCoroutine(AnimationWait());
+                    Debug.Log("when will this work?");
+                }
             }
 
             if (WASD == true)
@@ -136,9 +149,15 @@ public class MovementBackup : MonoBehaviour
                 cooldown = 0f;
 
             }
-
+            IEnumerator AnimationWait()
+            {
+                yield return new WaitForSeconds(aniWaitTime);
+                waitAnimation = true;
+                Debug.Log("yep uhuh");
+                player.GetComponent<Animator>().SetBool("HasEatenFruit", false);
+            }
         }
-
+        
         // Control jump height with length of jump held
         if (Input.GetKey(jump))
         {
