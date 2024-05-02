@@ -8,18 +8,27 @@ public class PauseMenu : MonoBehaviour
     public GameObject pausemenu;
     public GameObject settingsmenu;
     public GameObject tutorialmenu;
-    private GameObject note;
+    public GameObject button;
     public bool isPaused = false;
     public bool isSettings = false;
     public bool isTutorial = false;
     private int noteint = 1;
-    private string nota;
     public GameObject pNotes1, pNotes2, pNotes3, pNotes4, pNotes5, pNotes6, pNotes7;
     void Start()
     {
         pausemenu.SetActive(false);
         settingsmenu.SetActive(false);
+
+        button.SetActive(false);
+
         tutorialmenu.SetActive(false);
+        pNotes1.SetActive(false);
+        pNotes2.SetActive(false);
+        pNotes3.SetActive(false);
+        pNotes4.SetActive(false);
+        pNotes5.SetActive(false);
+        pNotes6.SetActive(false);
+        pNotes7.SetActive(false);
     }
 
     void Update()
@@ -34,6 +43,10 @@ public class PauseMenu : MonoBehaviour
             {
                 PauseGame();
             }
+        }
+        if (noteint > 7 || noteint < 0)
+        {
+            noteint = 1;
         }
     }
 
@@ -77,28 +90,62 @@ public class PauseMenu : MonoBehaviour
         pausemenu.SetActive(false);
         tutorialmenu.SetActive(true);
     }
-    public void phozBackward()
-    {
-        note.SetActive(false);
-        noteint -= 1;
-        nota = "pNotes" + noteint;
-        note = GameObject.Find(nota);
-        note.SetActive(true);
-    }
     public void phozForward()
     {
-        note.SetActive(false);
         noteint += 1;
-        nota = "pNotes" + noteint;
-        note = GameObject.Find(nota);
-        note.SetActive(true);
+    }
+    public void phozBackward()
+    {
+        noteint -= 1;
+    }
+    public void phozNoteSet()
+    {
+        noteint += 1;
+        if (noteint == 1)
+        {
+            pNotes1.SetActive(true);
+            pNotes2.SetActive(false);
+        }
+        if (noteint == 2)
+        {
+            pNotes1.SetActive(false);
+            pNotes2.SetActive(true);
+            pNotes3.SetActive(false);
+        }
+        if (noteint == 3)
+        {
+            pNotes2.SetActive(false);
+            pNotes3.SetActive(true);
+            pNotes4.SetActive(false);
+        }
+        if (noteint == 4)
+        {
+            pNotes3.SetActive(false);
+            pNotes4.SetActive(true);
+            pNotes5.SetActive(false);
+        }
+        if (noteint == 5)
+        {
+            pNotes4.SetActive(false);
+            pNotes5.SetActive(true);
+            pNotes6.SetActive(false);
+        }
+        if (noteint == 6)
+        {
+            pNotes5.SetActive(false);
+            pNotes6.SetActive(true);
+            pNotes7.SetActive(false);
+        }
+        if (noteint == 7)
+        {
+            pNotes6.SetActive(false);
+            pNotes7.SetActive(true);
+        }
     }
     public void phozStart()
     {
-        nota = "Phoz Notes " + noteint;
-        Debug.Log(nota);
-        note = GameObject.Find(nota);
-        note.SetActive(true);
-        //pNotes1.SetActive(true);
+        noteint = 1;
+        pNotes1.SetActive(true);
+        button.SetActive(true);
     }
 }

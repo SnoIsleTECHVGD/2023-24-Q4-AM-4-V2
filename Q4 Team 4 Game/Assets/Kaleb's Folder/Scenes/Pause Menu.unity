@@ -859,6 +859,7 @@ MonoBehaviour:
   pausemenu: {fileID: 1005154085}
   settingsmenu: {fileID: 1307211813}
   tutorialmenu: {fileID: 2117807283}
+  button: {fileID: 1546399582}
   isPaused: 0
   isSettings: 0
   isTutorial: 0
@@ -2134,11 +2135,11 @@ PrefabInstance:
     - target: {fileID: 2081582182791881369, guid: 414dc3237dc2a14458426e1668024404, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1809342580}
+      objectReference: {fileID: 40548028}
     - target: {fileID: 2081582182791881369, guid: 414dc3237dc2a14458426e1668024404, type: 3}
       propertyPath: fireAttack
       value: 
-      objectReference: {fileID: 1546399582}
+      objectReference: {fileID: 0}
     - target: {fileID: 2081582182791881370, guid: 414dc3237dc2a14458426e1668024404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.36
