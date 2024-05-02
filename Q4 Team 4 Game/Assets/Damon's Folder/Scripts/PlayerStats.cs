@@ -17,7 +17,12 @@ public class PlayerStats : MonoBehaviour
     public bool eatingAnimationTimer = false;
     public bool attackAnimationTimer = false;
     private bool waitAnimation;
+    public int aniWaitTimeOne;
     public int aniWaitTimeTwo;
+    public int aniWaitTimeThree;
+    public bool pressingButtonOneAnimationTimer;
+    public bool pressingButtonTwoAnimationTimer;
+    public bool pressingButtonThreeAnimationTimer;
     public bool hasEatenJFruit;
     public bool hasEatenGFruit;
 
@@ -94,7 +99,7 @@ public class PlayerStats : MonoBehaviour
         IEnumerator AttackAnimationWait()
         {
             yield return new WaitForSeconds(aniWaitTimeTwo);
-            waitAnimation = true;
+            waitAnimation = false;
             Debug.Log("yep uhuh");
             GetComponent<Animator>().SetBool("IsAttacking", false);
         }

@@ -13,7 +13,11 @@ public class BarrierButton : MonoBehaviour
     //public GameObject platform;
     BoxCollider2D boxCollider2D;
     private GameObject barrier;
-    
+
+    public bool pressingButtonAnimationTimer = false;
+    private bool waitAnimation;
+    public int aniWaitTimeButtonOne;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,19 +30,40 @@ public class BarrierButton : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
     
+    private void ButtonOnePress()
+    {
+      GetComponent<Animator>().SetBool("IsPressingButton", true);
+    }
+  
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GetComponent<BoxCollider2D>().isTrigger = false;
         if (collision.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<Animator>().SetBool("IsPressingButton", true);
             Debug.Log("is this working or something like that");
             GetComponent<BoxCollider2D>().isTrigger = true;
            if (GetComponent<BoxCollider2D>().isTrigger == true)
            {
                 ButtonIsTriggered = true;
                 GetComponent<Animator>().SetInteger("State", 1);
-           }
 
+                if (collision.gameObject.GetComponent<PlayerStats>().pressingButtonOneAnimationTimer == false && waitAnimation == false)
+                {
+                    waitAnimation = true;
+                    Invoke("ButtonOnePress", 0);
+                    StartCoroutine(ButtonOnePressingAnimationWait());
+                }
+            }
+
+            IEnumerator ButtonOnePressingAnimationWait()
+            {
+                yield return new WaitForSeconds(aniWaitTimeButtonOne);
+                waitAnimation = false;
+                Debug.Log("yep uhuh");
+                collision.GetComponent<Animator>().SetBool("IsPressingButton", false);
+            }
+           
             targetPos = posB.position;
 
         }
