@@ -15,7 +15,9 @@ public class PlayerStats : MonoBehaviour
     public int baseDamage;
     public int damage;
     public bool eatingAnimationTimer = false;
-
+    public bool attackAnimationTimer = false;
+    private bool waitAnimation;
+    public int aniWaitTimeTwo;
     public bool hasEatenJFruit;
     public bool hasEatenGFruit;
 
@@ -66,6 +68,10 @@ public class PlayerStats : MonoBehaviour
         
     }
 
+    private void Attacking()
+    {
+        GetComponent<Animator>().SetBool("IsAttacking", true);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -73,15 +79,27 @@ public class PlayerStats : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && hasEatenFFruit)
         {
             fireAttack.SetActive(true);
+            if (this.gameObject.GetComponent<PlayerStats>().attackAnimationTimer == false && waitAnimation == false)
+            {
+                waitAnimation = true;
+                Invoke("Attacking", 0);
+                StartCoroutine(AttackAnimationWait());
+            }
         }
         else if (Input.GetMouseButtonUp(0))
         {
             fireAttack.SetActive(false);
         }
-        
-        
-        
-        
+
+        IEnumerator AttackAnimationWait()
+        {
+            yield return new WaitForSeconds(aniWaitTimeTwo);
+            waitAnimation = true;
+            Debug.Log("yep uhuh");
+            GetComponent<Animator>().SetBool("IsAttacking", false);
+        }
+
+
         if (fruitTimer > 0)
         {
             fruitTimer -= Time.smoothDeltaTime;
