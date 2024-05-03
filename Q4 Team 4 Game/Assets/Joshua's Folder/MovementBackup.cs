@@ -55,7 +55,6 @@ public class MovementBackup : MonoBehaviour
     }
     private void Eating()
     {
-        player.GetComponent<Animator>().SetBool("HasEatenFruit", true);
     }
 
     void Update()
@@ -128,7 +127,7 @@ public class MovementBackup : MonoBehaviour
                     Debug.Log("Eats");
                     Invoke("Eating", 0);
                     Debug.Log("Eating is working");
-                    StartCoroutine(AnimationWait());
+                    Invoke("AnimationWait", aniWaitTime);
                     Debug.Log("when will this work?");
                 }
             }
@@ -165,13 +164,6 @@ public class MovementBackup : MonoBehaviour
                 rb2D.velocity = new Vector3(xVelocity, jumpheight, 0);
                 cooldown = 0f;
 
-            }
-            IEnumerator AnimationWait()
-            {
-                yield return new WaitForSeconds(aniWaitTime);
-                waitAnimation = true;
-                Debug.Log("yep uhuh");
-                player.GetComponent<Animator>().SetBool("HasEatenFruit", false);
             }
         }
         
@@ -230,6 +222,11 @@ public class MovementBackup : MonoBehaviour
             aGravFloat = 1;
             aGravFloat2 = 1;
         }
+    }
+    void AnimationWait()
+    {
+        waitAnimation = false;
+        Debug.Log("yep uhuh");
     }
     void WASDswap(bool WASDon)
     {

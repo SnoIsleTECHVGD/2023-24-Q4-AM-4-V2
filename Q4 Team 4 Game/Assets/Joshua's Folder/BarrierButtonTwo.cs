@@ -15,7 +15,7 @@ public class BarrierButtonTwo : MonoBehaviour
     private GameObject barriertwo;
 
     public bool pressingButtonAnimationTimer = false;
-    public bool waitAnimation;
+    private bool waitAnimation;
     public int aniWaitTimeButtonTwo;
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class BarrierButtonTwo : MonoBehaviour
 
     private void ButtonTwoPress()
     {
-        //this.GetComponent<Animator>().SetBool("IsPressingButton", true);
+        GetComponent<Animator>().SetBool("IsPressingButton", true);
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,7 +51,6 @@ public class BarrierButtonTwo : MonoBehaviour
 
                 if (collision.gameObject.GetComponent<PlayerStats>().pressingButtonTwoAnimationTimer == false && waitAnimation == false)
                 {
-                    ButtonTwoPress();
                     Debug.Log("testing");
                     waitAnimation = true;
                     Invoke("ButtonTwoPress", 0);
@@ -71,11 +70,13 @@ public class BarrierButtonTwo : MonoBehaviour
 
         }
     }
+    public void PlayAnimation()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {
-        
-
         if (ButtonIsTriggered == true)
         {
             barriertwo.transform.position = Vector2.MoveTowards(barriertwo.transform.position, targetPos, speed * Time.deltaTime);
