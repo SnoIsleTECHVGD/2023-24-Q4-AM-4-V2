@@ -7613,7 +7613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405477053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 15.5, z: 0}
+  m_LocalPosition: {x: 97, y: 15.7, z: 0}
   m_LocalScale: {x: 0.45960003, y: 0.2646, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8465,7 +8465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471803793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 188.22, y: 28.91, z: -0.045022413}
+  m_LocalPosition: {x: -3.6, y: 1.87, z: -0.045022413}
   m_LocalScale: {x: 0.6092, y: 0.4288, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12465,7 +12465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945974598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 14.3, z: 0}
+  m_LocalPosition: {x: 97, y: 14.5, z: 0}
   m_LocalScale: {x: 0.45960003, y: 0.2646, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41851,7 +41851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648691105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99122,6 +99122,9 @@ MonoBehaviour:
   posB: {fileID: 1462382097}
   speed: 1
   ButtonIsTriggered: 0
+  pressingButtonAnimationTimer: 0
+  waitAnimation: 0
+  aniWaitTimeButtonThree: 1
 --- !u!95 &1844973188
 Animator:
   serializedVersion: 4
