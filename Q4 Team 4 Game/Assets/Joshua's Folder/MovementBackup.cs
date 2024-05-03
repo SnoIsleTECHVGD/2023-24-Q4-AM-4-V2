@@ -32,7 +32,7 @@ public class MovementBackup : MonoBehaviour
     private bool qhf = true;
     private float aGravFloat = 1f;
     private float aGravFloat2 = 1f;
-
+    public bool waitToAni;
     
     float inputHorizontal;
 
@@ -60,10 +60,19 @@ public class MovementBackup : MonoBehaviour
 
     void Update()
     {
+        if (GetComponent<MovementBackup>().waitToAni == true)
+        {
+            waitToAni = false;
+        }
         rb2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb2D.velocity.y);
 
         if (rb2D.velocity.x != 0f)
             spriteRenderer.flipX = rb2D.velocity.x < 0f;
+
+        if (rb2D.velocity.x != 0f && GetComponent<PlayerStats>().hasEatenAGFruit == true)
+        {
+            spriteRenderer.flipX = rb2D.velocity.x > 0f;
+        }
        
         // Everything Between The Green Is God Mode
 
@@ -98,7 +107,15 @@ public class MovementBackup : MonoBehaviour
             }
             else
             {
-                GetComponent<Animator>().SetInteger("State", 0);
+                if (waitToAni == true)
+                {
+                    return;
+                }
+                else
+                {
+                    GetComponent<Animator>().SetInteger("State", 0);
+                }
+                
             }
 
             if (GetComponent<PlayerStats>().hasEatenJFruit == true || player.GetComponent<PlayerStats>().hasEatenAGFruit == true || player.GetComponent<PlayerStats>().hasEatenFFruit == true)

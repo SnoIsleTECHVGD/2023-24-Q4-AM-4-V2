@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253b093409ea089429dcee415b54549c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitName: Anti Gravity Fruit
+  fruitName: Anti-Gravity Fruit
   respawn: 1
   dead: 0
 --- !u!61 &91601425
@@ -7856,7 +7856,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.89675426
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -8465,7 +8465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471803793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.59, y: 1.85, z: -0.045022413}
+  m_LocalPosition: {x: 188.22, y: 28.91, z: -0.045022413}
   m_LocalScale: {x: 0.6092, y: 0.4288, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8574,6 +8574,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpbool: 3
+  waitToAni: 0
 --- !u!1 &477066005
 GameObject:
   m_ObjectHideFlags: 0
@@ -13180,7 +13181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058340405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.4, y: 0, z: -10}
+  m_LocalPosition: {x: 0.67, y: 5.9, z: -10}
   m_LocalScale: {x: 1.641497, y: 2.3320897, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98822,7 +98823,6 @@ GameObject:
   - component: {fileID: 1842969341}
   - component: {fileID: 1842969342}
   - component: {fileID: 1842969346}
-  - component: {fileID: 1842969345}
   - component: {fileID: 1842969347}
   - component: {fileID: 1842969348}
   m_Layer: 0
@@ -98900,24 +98900,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1842969345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842969340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473b0247f2b9dd844959312237a4bab0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posA: {fileID: 1732822095}
-  posB: {fileID: 1356671112}
-  speed: 1
-  ButtonIsTriggered: 0
-  pressingButtonAnimationTimer: 0
-  aniWaitTimeButtonOne: 0
 --- !u!61 &1842969346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98961,6 +98943,7 @@ MonoBehaviour:
   speed: 1
   ButtonIsTriggered: 0
   pressingButtonAnimationTimer: 0
+  waitAnimation: 0
   aniWaitTimeButtonTwo: 1
 --- !u!95 &1842969348
 Animator:
@@ -98994,7 +98977,6 @@ GameObject:
   - component: {fileID: 1844973182}
   - component: {fileID: 1844973184}
   - component: {fileID: 1844973186}
-  - component: {fileID: 1844973185}
   - component: {fileID: 1844973187}
   - component: {fileID: 1844973188}
   m_Layer: 0
@@ -99098,24 +99080,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1844973185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844973180}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473b0247f2b9dd844959312237a4bab0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posA: {fileID: 1086034550}
-  posB: {fileID: 1462382097}
-  speed: 1
-  ButtonIsTriggered: 0
-  pressingButtonAnimationTimer: 0
-  aniWaitTimeButtonOne: 0
 --- !u!61 &1844973186
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class BarrierButton : MonoBehaviour
     
     private void ButtonOnePress()
     {
-      GetComponent<Animator>().SetBool("IsPressingButton", true);
+      //GetComponent<Animator>().SetBool("IsPressingButton", true);
     }
   
     private void OnTriggerEnter2D(Collider2D collision)
