@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsmenu;
     public GameObject tutorialmenu;
     public GameObject button;
+    public GameObject phozForward;
+    public GameObject phozBackward;
     public bool isPaused = false;
     public bool isSettings = false;
     public bool isTutorial = false;
@@ -18,10 +20,9 @@ public class PauseMenu : MonoBehaviour
     {
         pausemenu.SetActive(false);
         settingsmenu.SetActive(false);
-
-        button.SetActive(false);
-
         tutorialmenu.SetActive(false);
+        phozBackward.SetActive(false);
+        phozForward.SetActive(false);
         pNotes1.SetActive(false);
         pNotes2.SetActive(false);
         pNotes3.SetActive(false);
@@ -47,6 +48,22 @@ public class PauseMenu : MonoBehaviour
         if (noteint > 7 || noteint < 0)
         {
             noteint = 1;
+        }
+        if (noteint == 1 || !isTutorial)
+        {
+            phozBackward.SetActive(false);
+        }
+        else
+        {
+            phozBackward.SetActive(true);
+        }
+        if (noteint == 7 || !isTutorial)
+        {
+            phozForward.SetActive(false);
+        }
+        else
+        {
+            phozForward.SetActive(true);
         }
     }
 
@@ -80,6 +97,13 @@ public class PauseMenu : MonoBehaviour
         pausemenu.SetActive(true);
         settingsmenu.SetActive(false);
         tutorialmenu.SetActive(false);
+        pNotes1.SetActive(false);
+        pNotes2.SetActive(false);
+        pNotes3.SetActive(false);
+        pNotes4.SetActive(false);
+        pNotes5.SetActive(false);
+        pNotes6.SetActive(false);
+        pNotes7.SetActive(false);
     }
 
     public void Tutorial()
@@ -90,17 +114,16 @@ public class PauseMenu : MonoBehaviour
         pausemenu.SetActive(false);
         tutorialmenu.SetActive(true);
     }
-    public void phozForward()
+    public void PhozForward()
     {
         noteint += 1;
     }
-    public void phozBackward()
+    public void PhozBackward()
     {
         noteint -= 1;
     }
     public void phozNoteSet()
     {
-        noteint += 1;
         if (noteint == 1)
         {
             pNotes1.SetActive(true);
@@ -142,7 +165,7 @@ public class PauseMenu : MonoBehaviour
             pNotes7.SetActive(true);
         }
     }
-    public void phozStart()
+    public void PhozStart()
     {
         noteint = 1;
         pNotes1.SetActive(true);
