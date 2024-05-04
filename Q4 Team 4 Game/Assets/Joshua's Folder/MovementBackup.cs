@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MovementBackup : MonoBehaviour
@@ -33,6 +34,9 @@ public class MovementBackup : MonoBehaviour
     private float aGravFloat = 1f;
     private float aGravFloat2 = 1f;
     public bool waitToAni;
+    [SerializeField] GameObject JFParticleSystemGenerator;
+    [SerializeField] GameObject AGFParticleSystemGenerator;
+    [SerializeField] GameObject FFParticleSystemGenerator;
     
     float inputHorizontal;
 
@@ -72,8 +76,14 @@ public class MovementBackup : MonoBehaviour
         {
             spriteRenderer.flipX = rb2D.velocity.x > 0f;
         }
+        if (antiGravity)
+        {
+            rb2D.gravityScale = -rb2D.gravityScale;
+            antiGravity = !antiGravity;
+            fhq = !fhq;
+        }
        
-        // Everything Between The Green Is God Mode
+        /* Everything Between The Green Is God Mode
 
         inputHorizontal = Input.GetAxisRaw("Horizontal");
 
@@ -81,17 +91,12 @@ public class MovementBackup : MonoBehaviour
         {
             antiGravity = !antiGravity;
         }
-        if (antiGravity)
-        {
-            rb2D.gravityScale = -rb2D.gravityScale;
-            antiGravity = !antiGravity;
-            fhq = !fhq;
-        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             b2D.enabled = !b2D.enabled;
         }
-        // Everything Between The Green Is God Mode
+         Everything Between The Green Is God Mode
+        */
         if (WASD == false)
         {
             if (Input.GetKey(left))
@@ -116,7 +121,32 @@ public class MovementBackup : MonoBehaviour
                 }
                 
             }
-
+            
+            if (GetComponent<PlayerStats>().hasEatenJFruit == true)
+            {
+                JFParticleSystemGenerator.SetActive(true);
+            }
+            else
+            {
+                JFParticleSystemGenerator.SetActive(false);
+            }
+            if (player.GetComponent<PlayerStats>().hasEatenAGFruit == true)
+            {
+                AGFParticleSystemGenerator.SetActive(true);
+            }
+            else
+            {
+                AGFParticleSystemGenerator.SetActive(false);
+            }
+            if (player.GetComponent<PlayerStats>().hasEatenFFruit == true)
+            {
+                FFParticleSystemGenerator.SetActive(true);
+            }
+            else
+            {
+                FFParticleSystemGenerator.SetActive(false);
+            }
+            
             if (GetComponent<PlayerStats>().hasEatenJFruit == true || player.GetComponent<PlayerStats>().hasEatenAGFruit == true || player.GetComponent<PlayerStats>().hasEatenFFruit == true)
             {
                 //GetComponent<PlayerStats>().eatingAnimationTimer

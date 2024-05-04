@@ -21,6 +21,7 @@ public class DoorController : MonoBehaviour
 
             }
             player.transform.position = destination.transform.position;
+        
         }
     }
 }

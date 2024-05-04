@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     Scene scene;
-    public static string nam = "Hola! Como Estas! Donde esta la biblioteca!";
+    public static string nam = "Title Scene";
     // Start is called before the first frame update
     void Start()
     {
