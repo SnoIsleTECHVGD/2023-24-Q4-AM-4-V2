@@ -13,6 +13,9 @@ public class EnemyWalk : MonoBehaviour
     public GameObject player;
     private float distance;
     private Vector2 direction;
+    public float minDistance = 30f;
+    public float maxDistance = 45f;
+    bool isChasing;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,12 +43,24 @@ public class EnemyWalk : MonoBehaviour
     */
         distance = Vector2.Distance(transform.position, player.transform.position);
          direction = player.transform.position - transform.position;
-
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        if (distance < minDistance)
+        {
+            isChasing = true;
+        }
+        if(distance > maxDistance)
+        {
+            isChasing = false;
+        }
+        
+        if (isChasing)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        }
+        
        
         
 
-        if (!IsFacingRight())
+        if (!IsFacingRight() && isChasing == true)
         {
             GetComponent<Animator>().SetInteger("State", 1);
             GetComponent<SpriteRenderer>().flipX = true;
@@ -53,17 +68,17 @@ public class EnemyWalk : MonoBehaviour
         }
         
 
-        else if (IsFacingRight())
+        else if (IsFacingRight() && isChasing == true)
         {
             GetComponent<SpriteRenderer>().flipX = false;
             GetComponent<Animator>().SetInteger("State", 1);
             //gameObject.transform.localScale = new Vector3(-0.6092f, 0.4288f);
         }
-        else
+       else if (isChasing == false)
         {
             GetComponent<Animator>().SetInteger("State", 0);
         }
-    
+
     }
     private bool IsFacingRight()
     {
