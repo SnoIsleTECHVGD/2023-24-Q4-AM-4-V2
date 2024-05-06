@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pausemenu;
-    public GameObject settingsmenu;
     public GameObject tutorialmenu;
     public GameObject button;
     public GameObject phozForward;
@@ -19,7 +18,6 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pausemenu.SetActive(false);
-        settingsmenu.SetActive(false);
         tutorialmenu.SetActive(false);
         phozBackward.SetActive(false);
         phozForward.SetActive(false);
@@ -34,7 +32,12 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && isSettings == false)
+        Debug.Log(isTutorial);
+        if (!isTutorial)
+        {
+            tutorialmenu.SetActive(false);
+        }
+        if(Input.GetKeyDown(KeyCode.Escape) && isTutorial == false)
         {
             if (isPaused)
             {
@@ -80,22 +83,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
-    public void Settings()
-    {
-        isPaused = false;
-        isSettings = true;
-        Time.timeScale = 0f;
-        pausemenu.SetActive(false);
-        settingsmenu.SetActive(true);
-    }
-
     public void Back()
     {
+        Debug.Log("Working");
         isPaused = true;
         isSettings = false;
         isTutorial = false;
         pausemenu.SetActive(true);
-        settingsmenu.SetActive(false);
         tutorialmenu.SetActive(false);
         pNotes1.SetActive(false);
         pNotes2.SetActive(false);
@@ -167,8 +161,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void PhozStart()
     {
-        noteint = 1;
-        pNotes1.SetActive(true);
         button.SetActive(true);
     }
 }
