@@ -42,7 +42,6 @@ public class BarrierButtonTwo : MonoBehaviour
         {
             collision.gameObject.GetComponent<Animator>().SetBool("IsPressingButton", true);
 
-            Debug.Log("is this working or something like that");
             GetComponent<BoxCollider2D>().isTrigger = true;
             if (GetComponent<BoxCollider2D>().isTrigger == true)
             {
@@ -51,7 +50,6 @@ public class BarrierButtonTwo : MonoBehaviour
 
                 if (collision.gameObject.GetComponent<PlayerStats>().pressingButtonTwoAnimationTimer == false && waitAnimation == false)
                 {
-                    Debug.Log("testing");
                     waitAnimation = true;
                     Invoke("ButtonTwoPress", 0);
                     StartCoroutine(ButtonTwoPressingAnimationWait());
@@ -61,7 +59,6 @@ public class BarrierButtonTwo : MonoBehaviour
                 {
                     yield return new WaitForSeconds(aniWaitTimeButtonTwo);
                     waitAnimation = false;
-                    Debug.Log("please work again");
                     collision.gameObject.GetComponent<Animator>().SetBool("IsPressingButton", false);
                 }
             }
