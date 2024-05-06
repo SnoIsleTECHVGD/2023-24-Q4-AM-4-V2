@@ -34,7 +34,7 @@ public class JumpFruit : MonoBehaviour
         on = true;
         if (on == true)
         {
-            player.GetComponent<PlayerStats>().fruitTimer = 30;
+            player.GetComponent<PlayerStats>().fruitTimer = 20;
             m = jumpInc;
             Debug.Log(m);
             player.GetComponent<MovementBackup>().jumpheight = m;

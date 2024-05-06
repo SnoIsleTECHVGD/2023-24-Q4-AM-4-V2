@@ -34,6 +34,6 @@ public class AGravFruit : MonoBehaviour
     void OnCollisionEnter2D()
     {
         s = true;
-        player.GetComponent<PlayerStats>().fruitTimer = 30;
+        player.GetComponent<PlayerStats>().fruitTimer = 20;
     }
 }

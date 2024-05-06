@@ -35,7 +35,7 @@ public class Eat : MonoBehaviour
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
                 
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 20;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenJFruit = true;
                 collision.gameObject.GetComponent<Animator>().SetTrigger("HasEatenFruit");
                 dead = true;
@@ -57,7 +57,7 @@ public class Eat : MonoBehaviour
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
 
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 20;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenFFruit = true;
                 collision.gameObject.GetComponent<Animator>().SetTrigger("HasEatenFruit");
                 dead = true;
@@ -78,7 +78,7 @@ public class Eat : MonoBehaviour
                     collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = false;
                 }
 
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 20;
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenGFruit = true;
                 collision.gameObject.GetComponent<Animator>().SetTrigger("HasEatenFruit");
                 dead = true;
@@ -99,7 +99,7 @@ public class Eat : MonoBehaviour
                 }
 
                 collision.gameObject.GetComponent<PlayerStats>().hasEatenAGFruit = true;
-                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 30;
+                collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 20;
                 collision.gameObject.GetComponent<Animator>().SetTrigger("HasEatenFruit");
                 dead = true;
             }
@@ -114,7 +114,7 @@ public class Eat : MonoBehaviour
         if (gameObject.transform.position == death)
         {
             respawn += Time.deltaTime;
-            if (respawn >= 30)
+            if (respawn >= 20)
             {
                 dead = false;
                 respawn = 0f;

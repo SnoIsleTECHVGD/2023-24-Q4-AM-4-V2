@@ -20,6 +20,10 @@ public class Void : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Lose Screen");
+        if (collision.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("Lose Screen");
+        }
+        
     }
 }

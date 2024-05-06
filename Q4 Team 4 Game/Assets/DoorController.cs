@@ -21,7 +21,7 @@ public class DoorController : MonoBehaviour
 
             }
             player.transform.position = destination.transform.position;
-        
+            collision.gameObject.GetComponent<PlayerStats>().fruitTimer = 0;
         }
     }
 }
