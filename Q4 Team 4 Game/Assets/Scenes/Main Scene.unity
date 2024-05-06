@@ -1422,8 +1422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   player: {fileID: 471803793}
-  minDistance: 5
-  maxDistance: 10
+  minDistance: 25
+  maxDistance: 35
 --- !u!1 &138938302
 GameObject:
   m_ObjectHideFlags: 0
@@ -8258,8 +8258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   player: {fileID: 471803793}
-  minDistance: 5
-  maxDistance: 10
+  minDistance: 25
+  maxDistance: 35
 --- !u!1 &471122509
 GameObject:
   m_ObjectHideFlags: 0
@@ -15150,8 +15150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   player: {fileID: 471803793}
-  minDistance: 5
-  maxDistance: 10
+  minDistance: 25
+  maxDistance: 35
 --- !u!1 &665824977
 GameObject:
   m_ObjectHideFlags: 0
@@ -18241,8 +18241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   player: {fileID: 471803793}
-  minDistance: 10
-  maxDistance: 15
+  minDistance: 25
+  maxDistance: 35
 --- !u!114 &1125565745
 MonoBehaviour:
   m_ObjectHideFlags: 0
