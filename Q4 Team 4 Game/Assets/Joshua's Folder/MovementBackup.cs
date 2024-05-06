@@ -14,7 +14,6 @@ public class MovementBackup : MonoBehaviour
     private Rigidbody2D rb2D;
     private BoxCollider2D b2D;
     private SpriteRenderer spriteRenderer;
-    public bool WASD = false;
     public LayerMask groundLayer;
     public float jumpbool;
     private float boxCastFloat = 0.51f;
@@ -97,8 +96,7 @@ public class MovementBackup : MonoBehaviour
         }
          Everything Between The Green Is God Mode
         */
-        if (WASD == false)
-        {
+
             if (Input.GetKey(left))
             {
                 rb2D.AddForce(Vector2.left * buildup * Time.deltaTime * 1000);
@@ -162,31 +160,6 @@ public class MovementBackup : MonoBehaviour
                 }
             }
 
-            if (WASD == true)
-            {
-                if (Input.GetKey(KeyCode.A))
-                {
-                    rb2D.AddForce(Vector2.left * buildup * Time.deltaTime * 100);
-                    GetComponent<Animator>().SetInteger("State", 2);
-
-                }
-                else
-                {
-                    GetComponent<Animator>().SetInteger("State", 0);
-                }
-
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rb2D.AddForce(Vector2.right * buildup);
-                    GetComponent<Animator>().SetInteger("State", 1);
-
-                }
-                else
-                {
-                    GetComponent<Animator>().SetInteger("State", 0);
-                }
-            }
-
             if (grounded() && Input.GetKeyDown(jump) || (Time.time - cooldown < timeSinceJump && grounded()))
             {
 
@@ -195,7 +168,6 @@ public class MovementBackup : MonoBehaviour
                 cooldown = 0f;
 
             }
-        }
         
         // Control jump height with length of jump held
         if (Input.GetKey(jump))
@@ -257,10 +229,5 @@ public class MovementBackup : MonoBehaviour
     {
         waitAnimation = false;
         Debug.Log("yep uhuh");
-    }
-    void WASDswap(bool WASDon)
-    {
-        WASD = WASDon;
-        WASDon = !WASDon;
     }
 }
