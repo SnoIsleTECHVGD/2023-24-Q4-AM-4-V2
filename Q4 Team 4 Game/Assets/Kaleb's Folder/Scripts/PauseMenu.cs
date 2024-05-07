@@ -10,10 +10,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject button;
     public GameObject phozForward;
     public GameObject phozBackward;
+    public GameObject mainMenuButton;
     public bool isPaused = false;
     public bool isSettings = false;
     public bool isTutorial = false;
     private int noteint = 1;
+    private string nam;
+    Scene scene;
     public GameObject pNotes1, pNotes2, pNotes3, pNotes4, pNotes5, pNotes6, pNotes7;
     void Start()
     {
@@ -32,7 +35,13 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isTutorial);
+        scene = SceneManager.GetActiveScene();
+        nam = scene.name;
+        if (nam == "Opening Scene")
+        {
+            pNotes1.SetActive(true);
+            Tutorial();
+        }
         if (!isTutorial)
         {
             tutorialmenu.SetActive(false);
@@ -85,7 +94,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void Back()
     {
-        Debug.Log("Working");
         isPaused = true;
         isSettings = false;
         isTutorial = false;
@@ -157,6 +165,7 @@ public class PauseMenu : MonoBehaviour
         {
             pNotes6.SetActive(false);
             pNotes7.SetActive(true);
+            mainMenuButton.SetActive(true);
         }
     }
     public void PhozStart()

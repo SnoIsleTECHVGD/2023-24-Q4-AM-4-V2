@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5108825625f7f204380583a3d9a97e34
+guid: 469332487eb248c4ea1aaec69825f775
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Back button_0
+      name: Continue_0
       rect:
         serializedVersion: 2
-        x: 703
-        y: 1504
-        width: 906
-        height: 319
+        x: 61
+        y: 149
+        width: 595
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 013c92ddf1287584c8dc37171344b1ad
-      internalID: -1896444686
+      spriteID: 0787d7fafba5684419e606b61b60df97
+      internalID: -242139365
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back button_0: -1896444686
+      Continue_0: -242139365
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

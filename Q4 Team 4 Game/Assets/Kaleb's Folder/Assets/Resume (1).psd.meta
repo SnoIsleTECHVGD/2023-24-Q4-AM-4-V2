@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5108825625f7f204380583a3d9a97e34
+guid: bce1a2be944035941917b17c763c9fad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,12 +131,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Back button_0
+      name: Resume (1)_0
       rect:
         serializedVersion: 2
-        x: 703
-        y: 1504
-        width: 906
+        x: 298
+        y: 618
+        width: 904
         height: 319
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 013c92ddf1287584c8dc37171344b1ad
-      internalID: -1896444686
+      spriteID: 40f1b8e4d82486d4394c88f4b61dcdad
+      internalID: -1872557419
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back button_0: -1896444686
+      Resume (1)_0: -1872557419
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
